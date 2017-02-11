@@ -1,15 +1,20 @@
 package main
 
 import (
-	"io"
+	"log"
 	"net/http"
 )
 
-func hello(w http.ResponseWriter, r *http.Request) {
-	io.WriteString(w, "Hello world!")
+func handle(w http.ResponseWriter, r *http.Request) {
+
+	// Log IP, URL requested
+	log.Println(r.RemoteAddr, r.URL.Path)
+
+	// Serve file at path
+	http.ServeFile(w, r, r.URL.Path)
 }
 
 func main() {
-	http.HandleFunc("/", hello)
+	http.HandleFunc("/", handle)
 	http.ListenAndServe(":8080", nil)
 }
