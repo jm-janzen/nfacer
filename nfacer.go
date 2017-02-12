@@ -3,18 +3,30 @@ package main
 import (
 	"log"
 	"net/http"
+
+	"github.com/yosssi/ace" // HTML template engine
 )
 
-func handle(w http.ResponseWriter, r *http.Request) {
+// Handler receives and logs an HTTP req, then serves our example base page
+func Handler(w http.ResponseWriter, r *http.Request) {
+	var requestedPath = r.URL.Path[1:] // Trim leading `/'
+	log.Println(r.RemoteAddr, requestedPath)
 
-	// Log IP, URL requested
-	log.Println(r.RemoteAddr, r.URL.Path)
+	// Load base.ace template
+	tpl, err := ace.Load("templates/base", "", nil)
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
 
-	// Serve file at path
-	http.ServeFile(w, r, r.URL.Path)
+	// Apply parsed template to w
+	if err := tpl.Execute(w, nil); err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
 }
 
 func main() {
-	http.HandleFunc("/", handle)
+	http.HandleFunc("/", Handler)
 	http.ListenAndServe(":8080", nil)
 }
