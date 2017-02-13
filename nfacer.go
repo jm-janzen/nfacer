@@ -3,6 +3,7 @@ package main
 import (
 	"log"
 	"net/http"
+	"strings"
 
 	"github.com/yosssi/ace" // HTML template engine
 )
@@ -10,7 +11,9 @@ import (
 // Handler receives and logs an HTTP req, then serves our example base page
 func Handler(w http.ResponseWriter, r *http.Request) {
 	var requestedPath = r.URL.Path[1:] // Trim leading `/'
-	log.Println(r.RemoteAddr, requestedPath)
+
+	// Print IP (sans port), requested path
+	log.Println(strings.Split(r.RemoteAddr, ":")[0], requestedPath)
 
 	// Load base.ace template
 	tpl, err := ace.Load("templates/base", "", nil)
