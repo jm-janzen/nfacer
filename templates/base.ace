@@ -5,4 +5,5 @@ html lang=en
     title Hi
   body
     h1 Hello World!
+    a href=other See the Other Page
 

@@ -5,18 +5,27 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/yosssi/ace" // HTML template engine
+	"github.com/gorilla/mux" // HTTP request  router
+	"github.com/yosssi/ace"  // HTML template engine
 )
 
-// Handler receives and logs an HTTP req, then serves our example base page
-func Handler(w http.ResponseWriter, r *http.Request) {
+// Handlers receive and log an HTTP req, then serve our pages (using _render)
+func HandleHome(w http.ResponseWriter, r *http.Request) {
+	render(w, r, "base")
+}
+
+func HandleOther(w http.ResponseWriter, r *http.Request) {
+	render(w, r, "other")
+}
+
+func render(w http.ResponseWriter, r *http.Request, template string) {
 	var requestedPath = r.URL.Path[1:] // Trim leading `/'
 
 	// Print IP (sans port), requested path
 	log.Println(strings.Split(r.RemoteAddr, ":")[0], requestedPath)
 
-	// Load base.ace template
-	tpl, err := ace.Load("templates/base", "", nil)
+	// Load given template by name
+	tpl, err := ace.Load("templates/"+template, "", nil)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
@@ -30,6 +39,11 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-	http.HandleFunc("/", Handler)
+	r := mux.NewRouter()
+
+	r.HandleFunc("/", HandleHome)
+	r.HandleFunc("/other", HandleOther)
+
+	http.Handle("/", r)
 	http.ListenAndServe(":8080", nil)
 }
