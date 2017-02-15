@@ -5,5 +5,7 @@ See Old Facer [here](https://github.com/jm-janzen/EC2-facer)
 ## Uses `ace` HTML Templating Engine
 
 [Project Home](https://github.com/yosssi/ace)
+
 [Documentation](https://godoc.org/github.com/yosssi/ace)
+
 [html/template](https://golang.org/pkg/text/template/#Template.Execute) (Makes heavy use of this std pkg)
