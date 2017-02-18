@@ -5,6 +5,8 @@ import (
 	"net/http"
 	"strings"
 
+	common "./utils"         // My common helper functions
+
 	"github.com/gorilla/mux" // HTTP request  router
 	"github.com/yosssi/ace"  // HTML template engine
 )
@@ -39,6 +41,9 @@ func render(w http.ResponseWriter, r *http.Request, template string) {
 }
 
 func main() {
+	// Change dir to project root, if not already there
+	common.ChdirWebserverRoot()
+
 	r := mux.NewRouter()
 
 	r.HandleFunc("/", HandleHome)
