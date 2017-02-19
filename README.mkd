@@ -27,6 +27,9 @@ go get github.com/pilu/fresh
 
 # Execute using our config (watch `*.ace` files)
 fresh -c .conf/runner.conf
+
+# If the above doesn't work, try
+$GOBIN/fresh -c .conf/runner.conf
 ```
 
 ### Uses `ace` HTML templating engine
