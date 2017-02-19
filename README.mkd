@@ -1,11 +1,41 @@
-# New Facer
+## New Facer
 
 See Old Facer [here](https://github.com/jm-janzen/EC2-facer)
 
-## Uses `ace` HTML Templating Engine
+### Installation
+```zsh
+# Navigate to your own golang working dir
+cd $GOPATH
+
+# Retrieve source code
+go get github.com/jm-janzen/nfacer
+```
+
+### Running (Vanilla)
+```zsh
+# Navigate to source dir
+cd src/github.com/jm-janzen/nfacer
+
+# Build and run nfacer
+go run nfacer.go
+```
+
+### Running (Monitor Source Changes)
+```zsh
+# Get package
+go get github.com/pilu/fresh
+
+# Execute using our config (watch `*.ace` files)
+fresh -c .conf/runner.conf
+
+# If the above doesn't work, try
+$GOBIN/fresh -c .conf/runner.conf
+```
+
+### Uses `ace` HTML templating engine
 
 [Project Home](https://github.com/yosssi/ace)
 
-[Documentation](https://godoc.org/github.com/yosssi/ace)
+### (Optional) uses `fresh` webserver file watcher
 
-[html/template](https://golang.org/pkg/text/template/#Template.Execute) (Makes heavy use of this std pkg)
+[Project Home](https://github.com/pilu/fresh)
