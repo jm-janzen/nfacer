@@ -5,10 +5,9 @@ import (
 	"net/http"
 	"strings"
 
-	common "./utils"         // My common helper functions
-
-	"github.com/gorilla/mux" // HTTP request  router
-	"github.com/yosssi/ace"  // HTML template engine
+	"github.com/gorilla/mux"                   // HTTP request  router
+	"github.com/jm-janzen/nfacer/utils/common" // Helper functions specific to this project
+	"github.com/yosssi/ace"                    // HTML template engine
 )
 
 // Handlers receive and log an HTTP req, then serve our pages (using _render)
