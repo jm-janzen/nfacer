@@ -10,6 +10,13 @@ import (
 	"github.com/yosssi/ace"                    // HTML template engine
 )
 
+// TODO move this common obj else, once finished designing
+type Data struct {
+	Title string
+	Other string
+	Num   int
+}
+
 // Handlers receive and log an HTTP req, then serve our pages (using _render)
 func HandleHome(w http.ResponseWriter, r *http.Request) {
 	RenderTpl(w, r, "base")
@@ -36,7 +43,7 @@ func HandleStatic(w http.ResponseWriter, r *http.Request) {
 	// Log request
 	log.Printf("static/%s/%s (%s)", dir, file, contentType)
 
-	// Serve files from `/static/{css,js/'
+	// Serve files from `/static/{css,js}/'
 	go http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
 
 }
@@ -48,14 +55,18 @@ func RenderTpl(w http.ResponseWriter, r *http.Request, template string) {
 	log.Println(strings.Split(r.RemoteAddr, ":")[0], requestedPath)
 
 	// Load given template by name
-	tpl, err := ace.Load("templates/"+template, "", nil)
+	// NOTE: Disabling template caching while in dev
+	tpl, err := ace.Load("templates/"+template, "", &ace.Options{DynamicReload: true})
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
 
-	// Apply parsed template to w
-	if err := tpl.Execute(w, nil); err != nil {
+	// Load our Data obj
+	data := Data{Title: "jm - " + template}
+
+	// Apply parsed template to w, passing in our Data obj
+	if err := tpl.Execute(w, data); err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}

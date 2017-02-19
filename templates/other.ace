@@ -1,9 +1,4 @@
-= doctype html
-html lang=en
-  head
-    meta charset=utf-8
-    title Other
-  body
-    h2 Other Page
+= include templates/global/head .
+h2 Other Page
 
 
