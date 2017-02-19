@@ -12,14 +12,36 @@ import (
 
 // Handlers receive and log an HTTP req, then serve our pages (using _render)
 func HandleHome(w http.ResponseWriter, r *http.Request) {
-	render(w, r, "base")
+	RenderTpl(w, r, "base")
 }
 
 func HandleOther(w http.ResponseWriter, r *http.Request) {
-	render(w, r, "other")
+	RenderTpl(w, r, "other")
 }
 
-func render(w http.ResponseWriter, r *http.Request, template string) {
+func HandleStatic(w http.ResponseWriter, r *http.Request) {
+	vars := mux.Vars(r)
+	dir := vars["dir"]
+	file := vars["file"]
+
+	// Set Content-Type in response header
+	var contentType string
+	if strings.HasSuffix(file, ".css") {
+		contentType = "text/css"
+	} else if strings.HasSuffix(file, ".js") {
+		contentType = "text/javascript"
+	}
+	w.Header().Add("Content-Type", contentType)
+
+	// Log request
+	log.Printf("static/%s/%s (%s)", dir, file, contentType)
+
+	// Serve files from `/static/{css,js/'
+	go http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
+
+}
+
+func RenderTpl(w http.ResponseWriter, r *http.Request, template string) {
 	var requestedPath = r.URL.Path[1:] // Trim leading `/'
 
 	// Print IP (sans port), requested path
@@ -47,6 +69,7 @@ func main() {
 
 	r.HandleFunc("/", HandleHome)
 	r.HandleFunc("/other", HandleOther)
+	r.HandleFunc("/static/{dir:(?:css|js)}/{file}", HandleStatic)
 
 	http.Handle("/", r)
 	http.ListenAndServe(":8080", nil)

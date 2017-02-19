@@ -2,8 +2,36 @@
 html lang=en
   head
     meta charset=utf-8
+    base href="/"
+    link rel="stylesheet" href="/static/css/global.css"
     title Hi
   body
-    h1 Hello World!
-    a href=other See the Other Page
+
+    div
+      h3 About JM
+      a href=https://github.com/jm-janzen github user profile
+
+    div
+      h3 About nfacer
+      a href=https://github.com/jm-janzen/nfacer github link
+
+    div
+      h3 Reference Materia[ls]
+      a href=https://github.com/nullportal/notes notes
+      br
+      a href=https://github.com/jm-janzen/scripts scripts
+
+    div
+      h3 Other Projects
+      a href=https://github.com/jm-janzen/termq-engine termq-engine
+      span  (c++11)
+      br
+      a href=https://github.com/jm-janzen/go example golang setup
+      br
+      a href=https://github.com/jm-janzen/lemonbar lemonbar script
+      span  (for i3wm)
+
+    script src="/static/js/global.js"
+    = javascript
+      farm("pig");
 
