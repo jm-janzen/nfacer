@@ -5,7 +5,6 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/gorilla/mux"                   // HTTP request  router
 	"github.com/jm-janzen/nfacer/utils/common" // Helper functions specific to this project
 	"github.com/yosssi/ace"                    // HTML template engine
 )
@@ -24,28 +23,6 @@ func HandleHome(w http.ResponseWriter, r *http.Request) {
 
 func HandleOther(w http.ResponseWriter, r *http.Request) {
 	RenderTpl(w, r, "other")
-}
-
-func HandleStatic(w http.ResponseWriter, r *http.Request) {
-	vars := mux.Vars(r)
-	dir := vars["dir"]
-	file := vars["file"]
-
-	// Set Content-Type in response header
-	var contentType string
-	if strings.HasSuffix(file, ".css") {
-		contentType = "text/css"
-	} else if strings.HasSuffix(file, ".js") {
-		contentType = "text/javascript"
-	}
-	w.Header().Add("Content-Type", contentType)
-
-	// Log request
-	log.Printf("static/%s/%s (%s)", dir, file, contentType)
-
-	// Serve files from `/static/{css,js}/'
-	go http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
-
 }
 
 func RenderTpl(w http.ResponseWriter, r *http.Request, template string) {
@@ -76,12 +53,13 @@ func main() {
 	// Change dir to project root, if not already there
 	common.ChdirWebserverRoot()
 
-	r := mux.NewRouter()
+	// Handle homepage, other page
+	http.HandleFunc("/", HandleHome)
+	http.HandleFunc("/other", HandleOther)
 
-	r.HandleFunc("/", HandleHome)
-	r.HandleFunc("/other", HandleOther)
-	r.HandleFunc("/static/{dir:(?:css|js)}/{file}", HandleStatic)
+	// Handle static resources (js, css)
+	fs := http.FileServer(http.Dir("static"))
+	http.Handle("/static/", http.StripPrefix("/static/", fs))
 
-	http.Handle("/", r)
 	http.ListenAndServe(":8080", nil)
 }

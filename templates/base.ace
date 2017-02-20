@@ -17,6 +17,8 @@ body
           li class="pure-menu-item"
             a class="pure-menu-link" href="#" blog
           li class="pure-menu-item"
+            a class="pure-menu-link" href="/other" other
+          li class="pure-menu-item"
             a class="pure-menu-link" href="#" about
           li class="pure-menu-item"
             a class="pure-menu-link" href="#" contact
