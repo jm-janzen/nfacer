@@ -6,6 +6,7 @@ import (
 	"net/http"
 	"strings"
 
+	"github.com/gorilla/mux"
 	"github.com/jm-janzen/nfacer/utils/common" // Helper functions specific to this project
 	"github.com/yosssi/ace"                    // HTML template engine
 )
@@ -19,7 +20,7 @@ type Data struct {
 
 // Define our own simple HTTP request multiplexer
 type Mux struct {
-	http.Handler
+	http.Handler  // Interface to ServeHTTP(w, *r)
 }
 
 // Handlers receive and log an HTTP req, then serve our pages (using _render)
@@ -81,6 +82,15 @@ func main() {
 	// Change dir to project root, if not already there
 	common.ChdirWebserverRoot()
 
+	r := mux.NewRouter()
+	r.HandleFunc("/", Route)
+
+	s := r.Host("jmjanzen.com:8080").Subrouter()
+	s.HandleFunc("/", Route)
+
+	http.ListenAndServe(":8080", s)
+
+	/*
 	mux := http.NewServeMux()
 
 	// Handle homepage, other page
@@ -92,4 +102,5 @@ func main() {
 	mux.Handle("/static/", http.StripPrefix("/static/", fs))
 
 	http.ListenAndServe(":8080", mux)
+	*/
 }
