@@ -1,0 +1,23 @@
+/*
+ *	Tweaks to pure-css rules
+ */
+
+/* Menu header (ie: "JM Janzen") */
+div#menu div.pure-menu a.pure-menu-heading {
+    /*background-color: #0abf0b; can't decide... */
+    background-color: #9cff00;
+    color: #232323;
+}
+
+/* External links */
+div#menu div.pure-menu a.x-origin {
+    background-color: #9cff00;
+    color: #232323;
+}
+
+.pure-menu-link .pure-menu-sep {
+    display: block;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: #0abf0b;
+}

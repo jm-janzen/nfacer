@@ -28,12 +28,11 @@ func HandleOther(w http.ResponseWriter, r *http.Request) {
 func RenderTpl(w http.ResponseWriter, r *http.Request, template string) {
 	var requestedPath = r.URL.Path[1:] // Trim leading `/'
 
-	// Print IP (sans port), requested path
-	log.Println(strings.Split(r.RemoteAddr, ":")[0], requestedPath)
+	// Print IP, URL, requested path
+	log.Println(strings.Split(r.RemoteAddr, ":")[0], strings.Split(r.Host, ":")[0], requestedPath)
 
 	// Load given template by name
-	// NOTE: Disabling template caching while in dev
-	tpl, err := ace.Load("templates/" + template, "", nil)
+	tpl, err := ace.Load("templates/"+template, "", nil)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
