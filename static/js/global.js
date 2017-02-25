@@ -5,3 +5,6 @@ function farm(animal) {
         console.log("...");
     }
 }
+
+console.log("farm ready");
+

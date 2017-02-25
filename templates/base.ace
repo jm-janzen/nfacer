@@ -23,9 +23,9 @@ body
           li class="pure-menu-item"
             a class="pure-menu-link" href="#" contact
           li class="pure-menu-item menu-item-divided"
-            a class="pure-menu-link x-origin" href="https://www.github.com/jm-janzen" github
+            a class="pure-menu-link" href="https://www.github.com/jm-janzen" github
           li class="pure-menu-item"
-            a class="pure-menu-link x-origin" href="http://www.nullportal.com" nullportal
+            a class="pure-menu-link" href="http://www.nullportal.com" nullportal
 
     div id="main"
       div class="header"
