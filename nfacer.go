@@ -2,6 +2,7 @@ package main
 
 import (
 	"log"
+	"net" // Get host, port strings
 	"net/http"
 	"strings"
 
@@ -16,15 +17,40 @@ type Data struct {
 	Num   int
 }
 
-// Handlers receive and log an HTTP req, then serve our pages (using _render)
-func HandleHome(w http.ResponseWriter, r *http.Request) {
-	RenderTpl(w, r, "base")
+// Define our own simple HTTP request multiplexer
+type Mux struct {
+	http.Handler
 }
 
+// Handlers receive and log an HTTP req, then serve our pages (using _render)
+func Route(w http.ResponseWriter, r *http.Request) {
+
+	// Get host and port values
+	// FIXME will err on IPv6 addresses
+	if host, port, err := net.SplitHostPort(r.Host); err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		log.Fatal(err)
+		return
+
+	} else { // Switch on host
+		log.Printf("host: %v, port: %v", host, port)
+		switch host {
+		case "jmjanzen.com", "www.jmjanzen.com":
+			RenderTpl(w, r, "base")
+		case "api.nullportal.com":
+			w.Write([]byte("welcome to nullportal api"))
+		case "nullportal.com", "www.nullportal.com":
+			w.Write([]byte("welcome to nullportal"))
+		}
+	}
+}
+
+// Handles /other, TODO implement a more programmatic solution
 func HandleOther(w http.ResponseWriter, r *http.Request) {
 	RenderTpl(w, r, "other")
 }
 
+// Renders given template by name (string)
 func RenderTpl(w http.ResponseWriter, r *http.Request, template string) {
 	var requestedPath = r.URL.Path[1:] // Trim leading `/'
 
@@ -55,13 +81,15 @@ func main() {
 	// Change dir to project root, if not already there
 	common.ChdirWebserverRoot()
 
+	mux := http.NewServeMux()
+
 	// Handle homepage, other page
-	http.HandleFunc("/", HandleHome)
-	http.HandleFunc("/other", HandleOther)
+	mux.HandleFunc("/", Route)
+	mux.HandleFunc("/other", HandleOther)
 
 	// Handle static resources (js, css)
 	fs := http.FileServer(http.Dir("static"))
-	http.Handle("/static/", http.StripPrefix("/static/", fs))
+	mux.Handle("/static/", http.StripPrefix("/static/", fs))
 
-	http.ListenAndServe(":8080", nil)
+	http.ListenAndServe(":8080", mux)
 }
