@@ -49,6 +49,9 @@ func RenderTpl(w http.ResponseWriter, r *http.Request, template string) {
 	}
 }
 
+/*
+ * TODO set up separate muxes for each host, subdomain (eg: *.nullportal.com, api.*.com, etc)
+ */
 func main() {
 	// Change dir to project root, if not already there
 	common.ChdirWebserverRoot()
