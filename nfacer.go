@@ -17,11 +17,6 @@ type Data struct {
 	Num   int
 }
 
-// Define our own simple HTTP request multiplexer
-type Mux struct {
-	http.Handler
-}
-
 // Handlers receive and log an HTTP req, then serve our pages (using _render)
 func Route(w http.ResponseWriter, r *http.Request) {
 
@@ -29,38 +24,54 @@ func Route(w http.ResponseWriter, r *http.Request) {
 	// FIXME will err on IPv6 addresses
 	if host, port, err := net.SplitHostPort(r.Host); err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
-		log.Fatal(err)
+		log.Println(err)
 		return
 
 	} else { // Switch on host
 		log.Printf("host: %v, port: %v", host, port)
 		switch host {
-		case "jmjanzen.com", "www.jmjanzen.com":
-			RenderTpl(w, r, "base")
 		case "api.nullportal.com":
 			w.Write([]byte("welcome to nullportal api"))
 		case "nullportal.com", "www.nullportal.com":
 			w.Write([]byte("welcome to nullportal"))
+		default:
+			HandleDefault(w, r)
 		}
 	}
 }
 
-// Handles /other, TODO implement a more programmatic solution
-func HandleOther(w http.ResponseWriter, r *http.Request) {
-	RenderTpl(w, r, "other")
+// Render whatever template is present at "/templates/bodies/{resource}.ace",
+// else write verbose error to w
+func HandleDefault(w http.ResponseWriter, r *http.Request) {
+	var requestedPath = r.URL.Path[1:] // Trim leading `/'
+	log.Println("Requested Path: " + requestedPath)
+
+	// TODO eventually replace with AJAX
+	prefix := "bodies/"
+	switch requestedPath {
+	case "":
+		RenderTpl(w, r, prefix+"/home")
+	default:
+		RenderTpl(w, r, prefix+requestedPath)
+
+	}
+
 }
 
 // Renders given template by name (string)
+// FIXME handle errors better once dev settles
 func RenderTpl(w http.ResponseWriter, r *http.Request, template string) {
 	var requestedPath = r.URL.Path[1:] // Trim leading `/'
 
-	// Print IP, URL, requested path
+	// Print IP, URL, requested path; path to template file
 	log.Println(strings.Split(r.RemoteAddr, ":")[0], strings.Split(r.Host, ":")[0], requestedPath)
+	log.Println("Serving template:", "templates/"+template)
 
 	// Load given template by name
 	tpl, err := ace.Load("templates/"+template, "", nil)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
+		log.Println("Error:", err.Error())
 		return
 	}
 
@@ -70,26 +81,24 @@ func RenderTpl(w http.ResponseWriter, r *http.Request, template string) {
 	// Apply parsed template to w, passing in our Data obj
 	if err := tpl.Execute(w, data); err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
+		log.Println("Error:", err.Error())
 		return
 	}
 }
 
-/*
- * TODO set up separate muxes for each host, subdomain (eg: *.nullportal.com, api.*.com, etc)
- */
 func main() {
 	// Change dir to project root, if not already there
 	common.ChdirWebserverRoot()
 
 	mux := http.NewServeMux()
 
-	// Handle homepage, other page
+	// Handle homepage, others
 	mux.HandleFunc("/", Route)
-	mux.HandleFunc("/other", HandleOther)
 
 	// Handle static resources (js, css)
 	fs := http.FileServer(http.Dir("static"))
 	mux.Handle("/static/", http.StripPrefix("/static/", fs))
 
-	http.ListenAndServe(":8080", mux)
+	// If any issue starting, log err, and exit(1)
+	log.Fatal(http.ListenAndServe(":8080", mux))
 }
