@@ -99,6 +99,11 @@ func main() {
 	fs := http.FileServer(http.Dir("static"))
 	mux.Handle("/static/", http.StripPrefix("/static/", fs))
 
+	// Handle favicon (anon func)
+	mux.HandleFunc("/favicon.ico", func(w http.ResponseWriter, r *http.Request) {
+		http.ServeFile(w, r, "static/img/fav/favicon.ico")
+	})
+
 	// If any issue starting, log err, and exit(1)
 	log.Fatal(http.ListenAndServe(":8080", mux))
 }
