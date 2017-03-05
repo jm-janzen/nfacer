@@ -4,6 +4,7 @@ html lang=en
     meta charset=utf-8
     base href="/"
     meta name="viewport" content="width=device-width, initial-scale=1"
+    meta name="description" content="JM Janzen's personal homepage, portal to other works"
     link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/pure-min.css"
     link rel="stylesheet" href="/static/pure/css/layouts/side-menu.css"
     link rel="stylesheet" href="/static/css/pure-tweaks.css"

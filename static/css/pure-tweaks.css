@@ -2,22 +2,29 @@
  *	Tweaks to pure-css rules
  */
 
-/*
- * Globals
- */
-
-:root {
-    --bright-lime: 	#9cff00;
-    --dim-lime: 	#6baf00;
-    --dark-lime: 	#436d00;
-}
-
 /* Menu header (ie: "JM Janzen") */
 div#menu div.pure-menu a.pure-menu-heading {
-    /*background-color: #0abf0b; can't decide... */
     background-color: var(--bright-lime);
     color: #232323;
 }
+
+div#menu {
+    border-right: 2px solid var(--bright-lime);
+}
+
+/* Hamburger bg */
+div#layout a#menuLink.menu-link {
+    background-color: var(--dim-lime);
+    border-bottom: 2px solid var(--bright-lime);
+    border-right:  2px solid var(--bright-lime);
+}
+/* Hamburger lines */
+div#layout a#menuLink.menu-link span,
+div#layout a#menuLink.menu-link span:before,
+div#layout a#menuLink.menu-link span:after {
+    background-color: var(--bright-lime);
+}
+
 
 /* External links */
 div#menu div.pure-menu a.x-origin {
@@ -39,7 +46,3 @@ div#menu div.pure-menu li.x-label {
     background-color: #0abf0b;
 }
 
-/* TODO add as toggle dim mode */
-body {
-    /*background-color: #070707;*/
-}

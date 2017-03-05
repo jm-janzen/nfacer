@@ -15,7 +15,4 @@ div class="content"
   h2 class="content-subhead" JM Janzen
   p a software dev
 
-  h2 class="content-subhead" jmjanzen.com
-  p JM's personal website
-
 script src="/static/pure/js/ui.js" type="text/javascript"

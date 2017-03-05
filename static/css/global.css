@@ -1,3 +1,27 @@
 /*
  * Rules which must apply at all times.
  */
+
+/*
+ * Global colo vars
+ */
+:root {
+    --bright-lime: 	#9cff00;
+    --dim-lime: 	#6baf00;
+    --dark-lime: 	#436d00;
+    --pale-lime:    #dbffa3;
+}
+
+/*
+ * Anchors w/in content
+ */
+div.content a {
+    background-color: var(--pale-lime);
+    color: var(--dark-lime);
+    transition: color 0.15s;
+    text-decoration: none;
+}
+div.content a:hover {
+    color: var(--dim-lime);
+    background-color: none;
+}
