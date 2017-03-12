@@ -12,7 +12,43 @@ div id="main"
 div class="content"
 
   / TODO pass sub-head(s), bod{y,ies} as optional variable(s)
-  h2 class="content-subhead" JM Janzen
-  p a software dev
+  h2 class="content-subhead" the basics
+  p#content-about
+    |
+      A Computer Programmer Analyst for {milis}ms (or {days} days).  Enjoys
+      tinkering on a handful of nano-to-medium Ubuntu 16.04
+      <a href="https://en.wikipedia.org/wiki/Amazon_Elastic_Compute_Cloud">EC2</a>
+      instances, starting projects (occasionally finishing them).
+  p
+    |
+      More later.
 
 script src="/static/pure/js/ui.js" type="text/javascript"
+
+/ for counter
+= javascript
+
+    // returns { days: n, milis: n } since graduation date
+    getGradTime = function gradTime() {
+        var day           = (24 * 60 * 60 * 1000);
+        var now           = new Date();
+        var graduation    = new Date('April 29, 2016');
+        var elapsedMilis  =
+            Math.round(Math.abs(now.getTime() - graduation.getTime()));
+        var elapsedDays =
+            Math.round(Math.abs(now.getTime() - graduation.getTime()) / (day));
+
+        return { days: elapsedDays, milis: elapsedMilis };
+    }
+
+    window.onload = function () {
+
+        // Populate `{days}`, `{milis}` with appropriate values
+
+        elapsed = getGradTime();
+
+        document.getElementById("content-about").innerHTML =
+            document.getElementById("content-about").innerHTML.replace(/{milis}/g, elapsed.milis);
+        document.getElementById("content-about").innerHTML =
+            document.getElementById("content-about").innerHTML.replace(/{days}/g, elapsed.days);
+    }
