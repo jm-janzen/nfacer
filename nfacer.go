@@ -2,7 +2,6 @@ package main
 
 import (
 	"log"
-	"net" // Get host, port strings
 	"net/http"
 	"strings"
 
@@ -19,24 +18,15 @@ type Data struct {
 
 // Handlers receive and log an HTTP req, then serve our pages (using _render)
 func Route(w http.ResponseWriter, r *http.Request) {
-
-	// Get host and port values
-	// FIXME will err on IPv6 addresses
-	if host, port, err := net.SplitHostPort(r.Host); err != nil {
-		http.Error(w, err.Error(), http.StatusInternalServerError)
-		log.Println(err)
-		return
-
-	} else { // Switch on host
-		log.Printf("host: %v, port: %v", host, port)
-		switch host {
-		case "api.nullportal.com":
-			w.Write([]byte("welcome to nullportal api"))
-		case "nullportal.com", "www.nullportal.com":
-			w.Write([]byte("welcome to nullportal"))
-		default:
-			HandleDefault(w, r)
-		}
+	switch r.Host {
+	case "api.nullportal.com":
+		w.Write([]byte("welcome to nullportal api"))
+	case "nullportal.com", "www.nullportal.com":
+		w.Write([]byte("welcome to nullportal"))
+	case "www.jmjanzen.com", "jmjanzen.com":
+		HandleDefault(w, r)
+	default:
+		log.Fatal("Unknown host:", r.Host)
 	}
 }
 
@@ -105,5 +95,5 @@ func main() {
 	})
 
 	// If any issue starting, log err, and exit(1)
-	log.Fatal(http.ListenAndServe(":8080", mux))
+	log.Fatal(http.ListenAndServe(":6060", mux))
 }
