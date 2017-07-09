@@ -76,7 +76,7 @@ func RenderTpl(w http.ResponseWriter, r *http.Request, template string) {
 	}
 
 	// Load our Data obj
-	data := Data{Title: "jm - " + template}
+	data := Data{Title: "jm - " + requestedPath}
 
 	// Apply parsed template to w, passing in our Data obj
 	if err := tpl.Execute(w, data); err != nil {
