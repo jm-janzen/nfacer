@@ -26,7 +26,8 @@ func Route(w http.ResponseWriter, r *http.Request) {
 	case "www.jmjanzen.com", "jmjanzen.com":
 		HandleDefault(w, r)
 	default:
-		log.Fatal("Unknown host:", r.Host)
+		log.Println("Unknown host:", r.Host)
+		w.Write([]byte("Use a proper URL, why don't you"))
 	}
 }
 
