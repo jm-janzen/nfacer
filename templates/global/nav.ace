@@ -12,11 +12,6 @@ body
           li.pure-menu-item
             a.pure-menu-link href="/home" home
           li.pure-menu-item
-            a.pure-menu-link href="/blog" blog
-
-          // TODO add "other" nested menu
-
-          li.pure-menu-item
             a.pure-menu-link href="/about" about
           li.pure-menu-item
             a.pure-menu-link href="/contact" contact
