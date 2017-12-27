@@ -29,14 +29,7 @@ func Route(w http.ResponseWriter, r *http.Request) {
 
 	} else { // Switch on host
 		log.Printf("host: %v, port: %v", host, port)
-		switch host {
-		case "api.nullportal.com":
-			w.Write([]byte("welcome to nullportal api"))
-		case "nullportal.com", "www.nullportal.com":
-			w.Write([]byte("welcome to nullportal"))
-		default:
-			HandleDefault(w, r)
-		}
+		HandleDefault(w, r)
 	}
 }
 
@@ -48,19 +41,21 @@ func HandleDefault(w http.ResponseWriter, r *http.Request) {
 
 	// TODO eventually replace with AJAX
 	prefix := "bodies/"
-	switch requestedPath {
-	case "":
-		RenderTpl(w, r, prefix+"/home")
-	default:
-		RenderTpl(w, r, prefix+requestedPath)
 
+	// Default to rendering home template
+	if requestedPath == "" {
+		requestedPath = "home"
 	}
+
+	var pageTitle string = requestedPath
+
+	RenderTpl(w, r, prefix+requestedPath, pageTitle)
 
 }
 
 // Renders given template by name (string)
 // FIXME handle errors better once dev settles
-func RenderTpl(w http.ResponseWriter, r *http.Request, template string) {
+func RenderTpl(w http.ResponseWriter, r *http.Request, template string, pageTitle string) {
 	var requestedPath = r.URL.Path[1:] // Trim leading `/'
 
 	// Print IP, URL, requested path; path to template file
@@ -76,7 +71,7 @@ func RenderTpl(w http.ResponseWriter, r *http.Request, template string) {
 	}
 
 	// Load our Data obj
-	data := Data{Title: "jm - " + requestedPath}
+	data := Data{Title: "jm - " + pageTitle}
 
 	// Apply parsed template to w, passing in our Data obj
 	if err := tpl.Execute(w, data); err != nil {
