@@ -8,6 +8,13 @@ div#menu div.pure-menu a.pure-menu-heading {
     color: #232323;
 }
 
+/* "home" image next to Menu Header */
+img.home-img {
+	padding-left: 5%;
+	width: 15%;
+	height: auto;
+}
+
 div#menu {
     border-right: 2px solid var(--bright-lime);
 }
@@ -39,6 +46,7 @@ div#menu div.pure-menu li.x-label {
 	font-size: 0.7em;
 }
 
+/* Internal links */
 .pure-menu-link .pure-menu-sep {
     display: block;
     text-decoration: none;
