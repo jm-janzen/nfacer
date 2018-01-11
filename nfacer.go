@@ -44,16 +44,22 @@ func HandleDefault(w http.ResponseWriter, r *http.Request) {
 // FIXME handle errors better once dev settles
 func RenderTpl(w http.ResponseWriter, r *http.Request, template string, pageTitle string) {
 
-	// Print IP, URL, requested path; path to template file
-	log.Println("Serving template:", "templates/"+template)
-
 	// Load given template by name
 	tpl, err := ace.Load("templates/"+template, "", nil)
 	if err != nil {
-		http.Error(w, err.Error(), http.StatusInternalServerError)
-		log.Println("Error:", err.Error())
-		return
+
+		// Invalid resource - hardcode to redirect to 404 page
+		log.Println("Error:", err.Error(), "trying 404 instead")
+		pageTitle, template = "not found", 404
+
+		// If this fails for some reason, just quit
+		if tpl, err = ace.Load("templates/bodies/404", "", nil); err == nil {
+			return
+		}
 	}
+
+	// Print IP, URL, requested path; path to template file
+	log.Println("Serving template:", "templates/"+template)
 
 	// Load our Data obj
 	data := Data{Title: "jm - " + pageTitle}
