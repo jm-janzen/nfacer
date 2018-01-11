@@ -23,19 +23,26 @@ div class="content"
     li
       a href="http://jmjanzen.com" jmjanzen.com
     ul
-      li description: new personal homepage
+      li.
+        description: new personal homepage
       li source code:  
         a href="https://github.com/jm-janzen/nfacer" nfacer
       li language:  
         a href="https://golang.org/" Golang
       li templating-engine:  
         a href="https://github.com/yosssi/ace" Ace
+      li hosting:  
+        a href="https://aws.amazon.com/" AWS
+      li bootstraps:  
+        a href="https://purecss.io/" Pure.css
 
   ul
     li
+      / TODO Switch this to use `old.*` subdomain
       a href="http://jmjanzen.com:8080" jmjanzen.com:8080
     ul
-      li description: old personal homepage
+      li.
+        description: old personal homepage
       li source code:  
         a href="https://github.com/jm-janzen/EC2-facer" EC2-facer
       li language:  
@@ -44,14 +51,28 @@ div class="content"
         a href="https://expressjs.com/" Express
       li templating-engine:  
         a href="http://www.embeddedjs.com/" EJS
+      li hosting:  
+        a href="https://aws.amazon.com/" AWS
 
   ul
     li
       a href="http://blog.nullportal.com" blog.nullportal.com
+      ul
+        li.
+            description: personal blog for me and my friends (unused at present).
+            Integrated with Discourse forum (talk subdomain)
+        li hosting:  
+          a href="https://www.digitalocean.com/" Digital Ocean
 
   ul
     li
       a href="http://talk.nullportal.com" talk.nullportal.com
+      ul
+        li.
+            description: (currently private) forum for me and my friends.
+            Integrated with WordPress blog (blog subdomain)
+        li hosting:  
+          a href="https://www.digitalocean.com/" Digital Ocean
 
   h2 class="content-subhead" scripts
   p forthcoming

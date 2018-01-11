@@ -15,7 +15,7 @@ div class="content"
   h2 class="content-subhead" the basics
   p#content-about
     |
-      A Computer Programmer Analyst for {milis}ms (or {days} days).  Enjoys
+      A Computer Programmer Analyst graduate for {milis}ms (or {days} days).  Enjoys
       tinkering on a handful of nano-to-medium Ubuntu 16.04
       <a href="https://en.wikipedia.org/wiki/Amazon_Elastic_Compute_Cloud">EC2</a>
       instances, starting projects (occasionally finishing them).
