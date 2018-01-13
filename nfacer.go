@@ -50,7 +50,7 @@ func RenderTpl(w http.ResponseWriter, r *http.Request, template string, pageTitl
 
 		// Invalid resource - hardcode to redirect to 404 page
 		log.Println("Error:", err.Error(), "trying 404 instead")
-		pageTitle, template = "not found", 404
+		pageTitle, template = "not found", "404"
 
 		// If this fails for some reason, just quit
 		if tpl, err = ace.Load("templates/bodies/404", "", nil); err == nil {
@@ -59,7 +59,7 @@ func RenderTpl(w http.ResponseWriter, r *http.Request, template string, pageTitl
 	}
 
 	// Print IP, URL, requested path; path to template file
-	log.Println("Serving template:", "templates/"+template)
+	log.Println("Serving template:", "templates/bodies/"+template)
 
 	// Load our Data obj
 	data := Data{Title: "jm - " + pageTitle}
