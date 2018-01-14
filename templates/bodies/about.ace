@@ -29,26 +29,24 @@ script src="/static/pure/js/ui.js" type="text/javascript"
 = javascript
 
     // returns { days: n, milis: n } since graduation date
-    getGradTime = function gradTime() {
-        var day           = (24 * 60 * 60 * 1000);
-        var now           = new Date();
-        var graduation    = new Date('April 29, 2016');
-        var elapsedMilis  =
-            Math.round(Math.abs(now.getTime() - graduation.getTime()));
-        var elapsedDays =
-            Math.round(Math.abs(now.getTime() - graduation.getTime()) / (day));
+    elapsedGradTime = function gradTime() {
+        var day  = (24 * 60 * 60 * 1000);
+        var now  = new Date().getTime();
+        var grad = new Date('April 29, 2016').getTime();
+        var elapsedMilis =
+            Math.round(Math.abs(now - grad));
+        var elapsedDays  =
+            Math.round(Math.abs(now - grad) / (day));
 
         return { days: elapsedDays, milis: elapsedMilis };
-    }
+    }();
 
     window.onload = function () {
 
         // Populate `{days}`, `{milis}` with appropriate values
 
-        elapsed = getGradTime();
-
         document.getElementById("content-about").innerHTML =
-            document.getElementById("content-about").innerHTML.replace(/{milis}/g, elapsed.milis);
+            document.getElementById("content-about").innerHTML.replace(/{milis}/g, elapsedGradTime.milis);
         document.getElementById("content-about").innerHTML =
-            document.getElementById("content-about").innerHTML.replace(/{days}/g, elapsed.days);
+            document.getElementById("content-about").innerHTML.replace(/{days}/g, elapsedGradTime.days);
     }
