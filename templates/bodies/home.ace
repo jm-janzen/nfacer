@@ -18,8 +18,5 @@ div.content
   h2.content-subhead internet foothold
   p.
     Within these pages you can find information about me, my projects.
-    Projects like the c++ {{ HTML "<a href='http://www.github.com/jm-janzen/termq-engine'>termq-engine</a>" }}
-    for terminal-based roguelikes.
-    
 
 script src="/static/pure/js/ui.js" type="text/javascript"

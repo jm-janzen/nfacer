@@ -10,13 +10,13 @@ div id="main"
     h1 projects
 
     / TODO pass sub-title as optional variable
-    h2 some things I've worked on
+    h2 things I've worked on
 
 div class="content"
 
   / TODO pass sub-head(s), bod{y,ies} as optional variable(s)
   h2 class="content-subhead" web
-  p some web-related personal projects I've worked on
+  h3 class="content-subhead" style="margin-top:1%;" web-related personal projects I've worked on
 
   / TODO add some padding, additional styling to these elems
   ul
@@ -74,8 +74,22 @@ div class="content"
         li hosting:  
           a href="https://www.digitalocean.com/" Digital Ocean
 
-  h2 class="content-subhead" scripts
-  p forthcoming
+  h2 class="content-subhead" play
+  h3 class="content-subhead" style="margin-top:1%;" video-games, engines
+
+  ul
+    li
+      a href="https://github.com/jm-janzen/termq-engine" termq-engine
+      ul
+        li.
+            description: game engine for terminal-based rogue-likes
+        li language:  
+          a href="https://en.wikipedia.org/wiki/C%2B%2B17" c++17
+        li dependencies:  
+          a href="https://en.wikipedia.org/wiki/Ncurses" ncurses
+
+  h2 class="content-subhead" tools
+  h3 class="content-subhead" style="margin-top:1%;" (forthcoming) CLIs, utility scripts I've authored
 
 script src="/static/pure/js/ui.js" type="text/javascript"
 

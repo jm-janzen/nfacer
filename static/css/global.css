@@ -15,13 +15,21 @@
 /*
  * Anchors w/in content
  */
-div.content a {
+div.content a, .citation {
     background-color: var(--pale-lime);
     color: var(--dark-lime);
     transition: color 0.15s;
     text-decoration: none;
 }
-div.content a:hover {
+div.content a:hover, .citation {
     color: var(--dim-lime);
     background-color: none;
 }
+
+/* My profile pic (on About page) */
+img.jm-profile-pic {
+    display: block;
+    margin: 2% auto;
+    border: 0.5em solid #191818;
+}
+

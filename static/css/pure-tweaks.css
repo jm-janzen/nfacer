@@ -54,3 +54,8 @@ div#menu div.pure-menu li.x-label {
     background-color: #0abf0b;
 }
 
+div#menu div.pure-menu a.pure-menu-heading:hover {
+    background-color: #232323;
+    color: var(--bright-lime);
+}
+
