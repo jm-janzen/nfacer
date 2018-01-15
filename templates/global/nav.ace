@@ -7,15 +7,11 @@ body
     div#menu
       div.pure-menu
         a.pure-menu-heading href="#" JM Janzen
+          img.home-img src="/home.png"
 
         ul.pure-menu-list
           li.pure-menu-item
-            a.pure-menu-link href="/home" home
-          li.pure-menu-item
-            a.pure-menu-link href="/blog" blog
-
-          // TODO add "other" nested menu
-
+            a.pure-menu-link href="/projects" projects
           li.pure-menu-item
             a.pure-menu-link href="/about" about
           li.pure-menu-item

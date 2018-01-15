@@ -16,10 +16,12 @@ div.content
 
   / TODO pass sub-head(s), bod{y,ies} as optional variable(s)
   h2.content-subhead internet foothold
-  p.
-    Within these pages you can find information about me, my projects.
-    Projects like the c++ {{ HTML "<a href='http://www.github.com/jm-janzen/termq-engine'>termq-engine</a>" }}
-    for terminal-based roguelikes.
-    
+  p
+    |
+      Within these pages you can find information about me, my projects. For the
+      curious, see the 
+    a href="https://github.com/jm-janzen/nfacer" project&nbsp;source
+    |
+      for this website.
 
 script src="/static/pure/js/ui.js" type="text/javascript"

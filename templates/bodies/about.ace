@@ -4,10 +4,13 @@
 = include templates/global/nav
 
 div id="main"
+
   div class="header"
 
     / TODO pass title as optional variable
     h1 about
+
+    img.jm-profile-pic src="/me.png" alt="Subject: JM Janzen, black & white portrait; Credit: Liz Cooper - Kingston Photographer"
 
 div class="content"
 
@@ -15,13 +18,61 @@ div class="content"
   h2 class="content-subhead" the basics
   p#content-about
     |
-      A Computer Programmer Analyst for {milis}ms (or {days} days).  Enjoys
-      tinkering on a handful of nano-to-medium Ubuntu 16.04
-      <a href="https://en.wikipedia.org/wiki/Amazon_Elastic_Compute_Cloud">EC2</a>
-      instances, starting projects (occasionally finishing them).
+      A Computer Programmer Analyst (CPA) graduate for {milis}ms (or {days} days).
   p
     |
-      More later.
+      Acknowledging the
+    a href="http://andyshora.com/full-stack-developers.html" cliché
+    | , I still consider myself a 
+    i full&#8209stack&nbsp;developer:
+    |
+      from servers, and dev-ops to testing, and view layers, I'm constantly seeking
+      to excel at whatever is required to get the job done well.
+
+  h2 class="content-subhead" the details
+  p
+    |
+      Early in my career, I caught the
+    i startup bug.
+    |
+      So it's no coincidence that
+      every software dev position I've held since graduation has been for tiny to medium
+      businesses.
+  p
+    |
+      When working in such close quarters with
+    a href="http://agilemodeling.com/essays/activeStakeholderParticipation.htm#Stakeholders" project stakeholders
+    |
+      one experiences a more immediate feedback loop between changes to code,
+      and its a effect on co-workers and clients.
+  p
+    |
+      While learning to work well within a team is a big part of this vocation, I do
+      enjoy the enhanced responsibility and control allowed/necessitated by enterprises
+      at this scale.
+
+  p
+    |
+      Further, these companies tend to have a more results-oriented view
+      of tasks, and are more capable of rapid and dramatic changes to the project's code base.
+      This naturally requires more effort and attention from devs, which is nice for keeping
+      us on our toes!
+
+  h2 class="content-subhead" the rest
+  p
+    |
+      Other than working in my trade, I have interests in drawing, writing,
+      playing with my 2 cats and 1 dog, and the unflinching adoration of my peers. ;p
+  p
+    |
+      Just kidding, I actually love constructive criticism.
+
+  hr
+
+  div.footer
+    small
+      i Portrait image credit:  
+      a.citation href="https://www.lizzography.com/" Liz Cooper Photography
 
 script src="/static/pure/js/ui.js" type="text/javascript"
 
@@ -29,26 +80,24 @@ script src="/static/pure/js/ui.js" type="text/javascript"
 = javascript
 
     // returns { days: n, milis: n } since graduation date
-    getGradTime = function gradTime() {
-        var day           = (24 * 60 * 60 * 1000);
-        var now           = new Date();
-        var graduation    = new Date('April 29, 2016');
-        var elapsedMilis  =
-            Math.round(Math.abs(now.getTime() - graduation.getTime()));
-        var elapsedDays =
-            Math.round(Math.abs(now.getTime() - graduation.getTime()) / (day));
+    elapsedGradTime = function gradTime() {
+        var day  = (24 * 60 * 60 * 1000);
+        var now  = new Date().getTime();
+        var grad = new Date('April 29, 2016').getTime();
+        var elapsedMilis =
+            Math.round(Math.abs(now - grad));
+        var elapsedDays  =
+            Math.round(Math.abs(now - grad) / (day));
 
         return { days: elapsedDays, milis: elapsedMilis };
-    }
+    }();
 
     window.onload = function () {
 
         // Populate `{days}`, `{milis}` with appropriate values
 
-        elapsed = getGradTime();
-
         document.getElementById("content-about").innerHTML =
-            document.getElementById("content-about").innerHTML.replace(/{milis}/g, elapsed.milis);
+            document.getElementById("content-about").innerHTML.replace(/{milis}/g, elapsedGradTime.milis);
         document.getElementById("content-about").innerHTML =
-            document.getElementById("content-about").innerHTML.replace(/{days}/g, elapsed.days);
+            document.getElementById("content-about").innerHTML.replace(/{days}/g, elapsedGradTime.days);
     }

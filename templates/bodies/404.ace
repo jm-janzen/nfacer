@@ -1,0 +1,13 @@
+/ pass whatever data we got from Execution to this template
+/ TODO separate below into its own sub-template
+= include templates/global/head .
+= include templates/global/nav
+
+div#main
+  div.header
+
+    h1 404
+
+    h2 sorry, could not find what you were looking for
+
+script src="/static/pure/js/ui.js" type="text/javascript"
