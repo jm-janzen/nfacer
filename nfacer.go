@@ -53,7 +53,8 @@ func RenderTpl(w http.ResponseWriter, r *http.Request, template string, pageTitl
 		pageTitle, template = "not found", "404"
 
 		// If this fails for some reason, just quit
-		if tpl, err = ace.Load("templates/bodies/404", "", nil); err == nil {
+		if tpl, err = ace.Load("templates/bodies/404", "", nil); err != nil {
+			log.Println("Error:", err.Error())
 			return
 		}
 	}
@@ -91,6 +92,9 @@ func main() {
 	})
 	mux.HandleFunc("/home.png", func(w http.ResponseWriter, r *http.Request) {
 		http.ServeFile(w, r, "static/img/home.png")
+	})
+	mux.HandleFunc("/me.png", func(w http.ResponseWriter, r *http.Request) {
+		http.ServeFile(w, r, "static/img/me.png")
 	})
 
 	// If any issue starting, log err, and exit(1)
