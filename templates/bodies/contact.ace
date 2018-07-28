@@ -41,4 +41,8 @@ div class="content"
       h2 class="content-subhead" twitter
       a href="https://twitter.com/bezorp" class="pure-link" @bezorp
 
+    div class="pure-table-striped pure-u-1 pure-u-md-1-4"
+      h2 class="content-subhead" devRant
+      a href="https://devrant.com/users/bezorp" class="pure-link" @bezorp
+
 script src="/static/pure/js/ui.js" type="text/javascript"
