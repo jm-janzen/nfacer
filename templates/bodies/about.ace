@@ -10,7 +10,7 @@ div id="main"
     / TODO pass title as optional variable
     h1 about
 
-    img.jm-profile-pic src="/me.png" alt="Subject: JM Janzen, black & white portrait; Credit: Liz Cooper - Kingston Photographer"
+    img.jm-profile-pic src="/me.png" alt="Subject: JM Janzen, middle-aged bearded caucasian man smiling, colour portrait; Credit: Liz Cooper - Kingston Photographer"
 
 div class="content"
 
@@ -18,16 +18,16 @@ div class="content"
   h2 class="content-subhead" the basics
   p#content-about
     |
-      A Computer Programmer Analyst (CPA) graduate for {milis}ms (or {days} days).
+      A Computer Programmer Analyst (CPA) graduate for {milis}ms (or {years} years).
   p
     |
-      Acknowledging the
-    a href="http://andyshora.com/full-stack-developers.html" cliché
-    | , I still consider myself a 
-    i full&#8209stack&nbsp;developer:
+      What started innocently as a simple fetish for the aesthetics of working in a terminal,
+      and a lack of patience for CSS, eventually became a full time specialisation in platform
+      software development.
+  P
     |
-      from servers, and dev-ops to testing, and view layers, I'm constantly seeking
-      to excel at whatever is required to get the job done well.
+      A lot of this website is no longer representative of where I'm at, but it'll just have to stand
+      on its own for now.
 
   h2 class="content-subhead" the details
   p
@@ -86,18 +86,17 @@ script src="/static/pure/js/ui.js" type="text/javascript"
         var grad = new Date('April 29, 2016').getTime();
         var elapsedMilis =
             Math.round(Math.abs(now - grad));
-        var elapsedDays  =
-            Math.round(Math.abs(now - grad) / (day));
+        var elapsedDays = ((now - grad) / (day) / 356).toFixed(1);
 
         return { days: elapsedDays, milis: elapsedMilis };
     }();
 
     window.onload = function () {
 
-        // Populate `{days}`, `{milis}` with appropriate values
+        // Populate `{years}`, `{milis}` with appropriate values
 
         document.getElementById("content-about").innerHTML =
             document.getElementById("content-about").innerHTML.replace(/{milis}/g, elapsedGradTime.milis);
         document.getElementById("content-about").innerHTML =
-            document.getElementById("content-about").innerHTML.replace(/{days}/g, elapsedGradTime.days);
+            document.getElementById("content-about").innerHTML.replace(/{years}/g, elapsedGradTime.days);
     }
