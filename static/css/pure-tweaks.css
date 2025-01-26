@@ -8,6 +8,10 @@ div#menu div.pure-menu a.pure-menu-heading {
     color: #232323;
 }
 
+code {
+  color: var(--dim-lime);
+}
+
 /* "home" image next to Menu Header */
 img.home-img {
 	padding-left: 5%;

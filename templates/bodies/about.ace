@@ -1,78 +1,79 @@
 / pass whatever data we got from Execution to this template
-/ TODO separate below into its own sub-template
 = include templates/global/head .
-= include templates/global/nav
 
-div id="main"
+body
+  div#layout
+    a#menuLink.menu-link href="#menu"
+      // Hamburger icon
+      span
 
-  div class="header"
+    div#menu
+      div.pure-menu
+        a.pure-menu-heading href="#" JM Janzen
+          img.home-img src="/home.png"
 
-    / TODO pass title as optional variable
-    h1 about
+        ul.pure-menu-list
+          li.pure-menu-item
+            a.pure-menu-link href="/projects" projects
+          li.pure-menu-item
+            a.pure-menu-link href="/about" about
+          li.pure-menu-item
+            a.pure-menu-link href="/contact" contact
+          li.pure-menu-item.menu-item-divided.x-label
+            label external links
+          li.pure-menu-item.menu-item-divided
+            a.pure-menu-link.x-origin href="https://www.github.com/jm-janzen" github
+          li.pure-menu-item
+            a.pure-menu-link.x-origin href="http://www.nullportal.com" nullportal
 
-    img.jm-profile-pic src="/me.png" alt="Subject: JM Janzen, middle-aged bearded caucasian man smiling, colour portrait; Credit: Liz Cooper - Kingston Photographer"
+    div id="main"
 
-div class="content"
+      div class="header"
 
-  / TODO pass sub-head(s), bod{y,ies} as optional variable(s)
-  h2 class="content-subhead" the basics
-  p#content-about
-    |
-      A Computer Programmer Analyst (CPA) graduate for {milis}ms (or {years} years).
-  p
-    |
-      What started innocently as a simple fetish for the aesthetics of working in a terminal,
-      and a lack of patience for CSS, eventually became a full time specialisation in platform
-      software development.
-  P
-    |
-      A lot of this website is no longer representative of where I'm at, but it'll just have to stand
-      on its own for now.
+        h1 about
 
-  h2 class="content-subhead" the details
-  p
-    |
-      Early in my career, I caught the
-    i startup bug.
-    |
-      So it's no coincidence that
-      every software dev position I've held since graduation has been for tiny to medium
-      businesses.
-  p
-    |
-      When working in such close quarters with
-    a href="http://agilemodeling.com/essays/activeStakeholderParticipation.htm#Stakeholders" project stakeholders
-    |
-      one experiences a more immediate feedback loop between changes to code,
-      and its a effect on co-workers and clients.
-  p
-    |
-      While learning to work well within a team is a big part of this vocation, I do
-      enjoy the enhanced responsibility and control allowed/necessitated by enterprises
-      at this scale.
+        img.jm-profile-pic src="/me.png" alt="Subject: JM Janzen, middle-aged bearded caucasian man smiling, colour portrait; Credit: Liz Cooper - Kingston Photographer"
 
-  p
-    |
-      Further, these companies tend to have a more results-oriented view
-      of tasks, and are more capable of rapid and dramatic changes to the project's code base.
-      This naturally requires more effort and attention from devs, which is nice for keeping
-      us on our toes!
+    div class="content"
 
-  h2 class="content-subhead" the rest
-  p
-    |
-      Other than working in my trade, I have interests in drawing, writing,
-      playing with my 2 cats and 1 dog, and the unflinching adoration of my peers. ;p
-  p
-    |
-      Just kidding, I actually love constructive criticism.
+      h2 class="content-subhead" the basics
+      p#content-about
+        |
+          I have been working professionally as a software developer for {milis}ms (or {years} years).
+      p
+        |
+          In that time I've gained a deep appreciation for a details of this craft,
+          and a lifelong enjoyment for tinkering with software.
+          The first time I saw a terminal on Linux, with amazing and beautiful packages
+          like <code>vim</code>, <code>git</code>, and <code>awk</code>, I knew I had
+          picked a really fun career.
 
-  hr
 
-  div.footer
-    small
-      i Portrait image credit:  
-      a.citation href="https://www.lizzography.com/" Liz Cooper Photography
+      h2 class="content-subhead" the details
+      p
+        |
+          Early in my career, I caught the
+        i startup bug.
+        |
+          So it's no coincidence that
+          every software dev position I've held since graduation has been for tiny to medium
+          businesses.
+
+      h2 class="content-subhead" the rest
+      p
+        |
+          Other than working in my trade, I have interests in drawing, writing,
+          playing with my 2 cats and 1 dog, and the unflinching adoration of my peers. ;p
+      p
+        |
+          Just kidding, I actually love constructive criticism.
+
+      hr
+
+      div.footer
+        small
+          i Portrait image credit:  
+          a.citation href="https://www.lizzography.com/" Liz Cooper Photography
 
 script src="/static/pure/js/ui.js" type="text/javascript"
 

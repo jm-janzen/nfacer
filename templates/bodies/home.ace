@@ -1,27 +1,51 @@
 / pass whatever data we got from Execution to this template
 / TODO separate below into its own sub-template
 = include templates/global/head .
-= include templates/global/nav
+body
+  div#layout
+    a#menuLink.menu-link href="#menu"
+      // Hamburger icon
+      span
 
-div#main
-  div.header
+    div#menu
+      div.pure-menu
+        a.pure-menu-heading href="#" JM Janzen
+          img.home-img src="/home.png"
 
-    / TODO pass title as optional variable
-    h1 hello
+        ul.pure-menu-list
+          li.pure-menu-item
+            a.pure-menu-link href="/projects" projects
+          li.pure-menu-item
+            a.pure-menu-link href="/about" about
+          li.pure-menu-item
+            a.pure-menu-link href="/contact" contact
+          li.pure-menu-item.menu-item-divided.x-label
+            label external links
+          li.pure-menu-item.menu-item-divided
+            a.pure-menu-link.x-origin href="https://www.github.com/jm-janzen" github
+          li.pure-menu-item
+            a.pure-menu-link.x-origin href="http://www.nullportal.com" nullportal
 
-    / TODO pass sub-title as optional variable
-    h2 and welcome
 
-div.content
+    div#main
+      div.header
 
-  / TODO pass sub-head(s), bod{y,ies} as optional variable(s)
-  h2.content-subhead internet foothold
-  p
-    |
-      Within these pages you can find information about me, my projects. For the
-      curious, see the 
-    a href="https://github.com/jm-janzen/nfacer" project&nbsp;source
-    |
-      for this website.
+        / TODO pass title as optional variable
+        h1 hello
+
+        / TODO pass sub-title as optional variable
+        h2 and welcome
+
+      div.content
+
+        / TODO pass sub-head(s), bod{y,ies} as optional variable(s)
+        h2.content-subhead internet foothold
+        p
+          |
+            Within these pages you can find information about me, my projects. For the
+            curious, see the 
+          a href="https://github.com/jm-janzen/nfacer" project&nbsp;source
+          |
+            for this website.
 
 script src="/static/pure/js/ui.js" type="text/javascript"

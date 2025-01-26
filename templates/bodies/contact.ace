@@ -2,47 +2,59 @@
 / TODO separate below into its own sub-template
 / TODO Rename this page to 'network' ...? Kinda like that
 = include templates/global/head .
-= include templates/global/nav
 
-div id="main"
-  div class="header"
+body
+  div#layout
+    a#menuLink.menu-link href="#menu"
+      // Hamburger icon
+      span
 
-    / TODO pass title as optional variable
-    h1 contact
+    div#menu
+      div.pure-menu
+        a.pure-menu-heading href="#" JM Janzen
+          img.home-img src="/home.png"
 
-    / TODO pass sub-title as optional variable
-    h2 get in touch
+        ul.pure-menu-list
+          li.pure-menu-item
+            a.pure-menu-link href="/projects" projects
+          li.pure-menu-item
+            a.pure-menu-link href="/about" about
+          li.pure-menu-item
+            a.pure-menu-link href="/contact" contact
+          li.pure-menu-item.menu-item-divided.x-label
+            label external links
+          li.pure-menu-item.menu-item-divided
+            a.pure-menu-link.x-origin href="https://www.github.com/jm-janzen" github
+          li.pure-menu-item
+            a.pure-menu-link.x-origin href="http://www.nullportal.com" nullportal
 
-div class="content"
+    div id="main"
+      div class="header"
 
-  / TODO pass sub-head(s), bod{y,ies} as optional variable(s)
-  / TODO Add some logos/icons to the following items
-  h2 class="content-subhead" email
-  a href="mailto:hello@jmjanzen.com" class="pure-link" hello@jmjanzen.com
+        / TODO pass title as optional variable
+        h1 contact
 
-  div class="pure-g"
-    div class="pure-table-striped pure-u-1 pure-u-md-1-4"
-      h2 class="content-subhead" github
-      a href="https://github.com/jm-janzen" class="pure-link" github.com/jm-janzen
+        / TODO pass sub-title as optional variable
+        h2 get in touch
 
-    div class="pure-table-striped pure-u-1 pure-u-md-1-4"
-      h2 class="content-subhead" stackoverflow
-      a href="https://stackoverflow.com/users/4718693/j-m-janzen" class="pure-link" /users/4718693/j-m-janzen
+    div class="content"
 
-    div class="pure-table-striped pure-u-1 pure-u-md-1-4"
-      h2 class="content-subhead" linkedin
-      a href="https://www.linkedin.com/in/jm-janzen/" class="pure-link" in/jm-janzen
+      / TODO pass sub-head(s), bod{y,ies} as optional variable(s)
+      / TODO Add some logos/icons to the following items
+      h2 class="content-subhead" email
+      a href="mailto:hello@jmjanzen.com" class="pure-link" hello@jmjanzen.com
 
-    div class="pure-table-striped pure-u-1 pure-u-md-1-4"
-      h2 class="content-subhead" instagram
-      a href="https://www.instagram.com/bezorp/" class="pure-link" @bezorp
+      div class="pure-g"
+        div class="pure-table-striped pure-u-1 pure-u-md-1-4"
+          h2 class="content-subhead" github
+          a href="https://github.com/jm-janzen" class="pure-link" github.com/jm-janzen
 
-    div class="pure-table-striped pure-u-1 pure-u-md-1-4"
-      h2 class="content-subhead" twitter
-      a href="https://twitter.com/bezorp" class="pure-link" @bezorp
+        div class="pure-table-striped pure-u-1 pure-u-md-1-4"
+          h2 class="content-subhead" stackoverflow
+          a href="https://stackoverflow.com/users/4718693/j-m-janzen" class="pure-link" /users/4718693/j-m-janzen
 
-    div class="pure-table-striped pure-u-1 pure-u-md-1-4"
-      h2 class="content-subhead" devRant
-      a href="https://devrant.com/users/bezorp" class="pure-link" @bezorp
+        div class="pure-table-striped pure-u-1 pure-u-md-1-4"
+          h2 class="content-subhead" linkedin
+          a href="https://www.linkedin.com/in/jm-janzen/" class="pure-link" in/jm-janzen
 
 script src="/static/pure/js/ui.js" type="text/javascript"
