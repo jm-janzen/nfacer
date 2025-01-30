@@ -42,11 +42,9 @@ body
           I have been working professionally as a software developer for {milis}ms (or {years} years).
       p
         |
-          In that time I've gained a deep appreciation for a details of this craft,
-          and a lifelong enjoyment for tinkering with software.
-          The first time I saw a terminal on Linux, with amazing and beautiful packages
-          like <code>vim</code>, <code>git</code>, and <code>awk</code>, I knew I had
-          picked a really fun career.
+          The first time I saw someone using a terminal on Linux, with amazing and
+          beautiful packages like <code>vim</code>, <code>git</code>, and <code>awk</code>,
+          I knew I wanted to spend my time working with this technology.
 
 
       h2 class="content-subhead" the details
@@ -55,9 +53,15 @@ body
           Early in my career, I caught the
         i startup bug.
         |
-          So it's no coincidence that
-          every software dev position I've held since graduation has been for tiny to medium
-          businesses.
+          So it's no coincidence that I've worked at several small to medium outfits. While I'm
+          not against larger enterprises, I like the dynamism and impact that is possible with
+          smaller, more nimble businesses.
+      p
+        |
+          I'm pretty comfortable along the entire stack (FE, BE, DevOps), especially now with
+          libraries like ReactJS and frameworks like NextJS, increasingly formalising FE work,
+          making it less a matter of opinion, and more a set of best practices. (I'm all for
+          creativity in personal projects but for work stuff I like boring and battle-tested.)
 
       h2 class="content-subhead" the rest
       p
