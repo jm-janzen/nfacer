@@ -2,34 +2,16 @@
 
 See Old Facer [here](https://github.com/jm-janzen/EC2-facer)
 
-### Installation
-```zsh
-# Navigate to your own golang working dir
-cd $GOPATH
+This is my ~glorified business card~ personal homepage. I started it a while ago, because I wanted to do something with Go, and play around with some HTML/CSS/JS.
 
-# Retrieve source code
-go get github.com/jm-janzen/nfacer
-```
-
-### Running (Vanilla)
-```zsh
-# Navigate to source dir
-cd src/github.com/jm-janzen/nfacer
-
-# Build and run nfacer
-go run nfacer.go
+### Running
+```shell
+go run github.com/jm-janzen/nfacer
 ```
 
 ### Running (Monitor Source Changes)
-```zsh
-# Get package
-go get github.com/pilu/fresh
-
-# Execute using our config (watch `*.ace` files)
-fresh -c .conf/runner.conf
-
-# If the above doesn't work, try
-$GOBIN/fresh -c .conf/runner.conf
+```shell
+go run github.com/pilu/fresh -c .conf/runner.conf
 ```
 
 ### Uses `ace` HTML templating engine
