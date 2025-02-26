@@ -8,7 +8,6 @@ import (
 	"github.com/yosssi/ace"                    // HTML template engine
 )
 
-// TODO move this common obj else, once finished designing
 type Data struct {
 	Title string
 	Other string
@@ -26,7 +25,6 @@ func Route(w http.ResponseWriter, r *http.Request) {
 func HandleDefault(w http.ResponseWriter, r *http.Request) {
 	var requestedPath = r.URL.Path[1:] // Trim leading `/'
 
-	// TODO eventually replace with AJAX
 	prefix := "bodies/"
 
 	// Default to rendering home template

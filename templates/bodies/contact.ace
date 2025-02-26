@@ -1,5 +1,4 @@
 / pass whatever data we got from Execution to this template
-/ TODO separate below into its own sub-template
 / TODO Rename this page to 'network' ...? Kinda like that
 = include templates/global/head .
 
@@ -31,15 +30,12 @@ body
     div id="main"
       div class="header"
 
-        / TODO pass title as optional variable
         h1 contact
 
-        / TODO pass sub-title as optional variable
         h2 get in touch
 
     div class="content"
 
-      / TODO pass sub-head(s), bod{y,ies} as optional variable(s)
       / TODO Add some logos/icons to the following items
       h2 class="content-subhead" email
       a href="mailto:hello@jmjanzen.com" class="pure-link" hello@jmjanzen.com

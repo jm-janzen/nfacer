@@ -1,5 +1,4 @@
 / pass whatever data we got from Execution to this template
-/ TODO separate below into its own sub-template
 = include templates/global/head .
 = include templates/global/nav
 

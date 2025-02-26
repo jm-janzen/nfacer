@@ -1,5 +1,4 @@
 / pass whatever data we got from Execution to this template
-/ TODO separate below into its own sub-template
 = include templates/global/head .
 
 body
@@ -30,19 +29,15 @@ body
     div id="main"
       div class="header"
 
-        / TODO pass title as optional variable
         h1 projects
 
-        / TODO pass sub-title as optional variable
         h2 things I've worked on
 
     div class="content"
 
-      / TODO pass sub-head(s), bod{y,ies} as optional variable(s)
       h2 class="content-subhead" web
       h3 class="content-subhead" style="margin-top:1%;" web-related personal projects I've worked on
 
-      / TODO add some padding, additional styling to these elems
       ul
         li
           a href="http://jmjanzen.com" jmjanzen.com
@@ -62,7 +57,6 @@ body
 
       ul
         li
-          / TODO Switch this to use `old.*` subdomain
           a href="http://jmjanzen.com:8080" jmjanzen.com:8080
         ul
           li.
