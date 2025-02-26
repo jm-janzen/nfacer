@@ -55,7 +55,7 @@ body
 
       ul
         li
-          a href="http://jmjanzen.com:8080" jmjanzen.com:8080
+          a href="https://old.jmjanzen.com" old.jmjanzen.com
         ul
           li.
             description: old personal homepage
