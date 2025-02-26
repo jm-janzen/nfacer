@@ -24,8 +24,6 @@ body
             label external links
           li.pure-menu-item.menu-item-divided
             a.pure-menu-link.x-origin href="https://www.github.com/jm-janzen" github
-          li.pure-menu-item
-            a.pure-menu-link.x-origin href="http://www.nullportal.com" nullportal
 
     div id="main"
       div class="header"
