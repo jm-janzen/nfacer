@@ -10,14 +10,16 @@ go run github.com/jm-janzen/nfacer
 ```
 
 ### Running (Monitor Source Changes)
+
+Note you'll want to connect to http://localhost:8080 if you want to make use of live reloading in browser.
 ```shell
-go run github.com/pilu/fresh -c .conf/runner.conf
+go run github.com/air-verse/air
 ```
 
 ### Uses `ace` HTML templating engine
 
 [Project Home](https://github.com/yosssi/ace)
 
-### (Optional) uses `fresh` webserver file watcher
+### (Optional) uses `air` live reloader
 
-[Project Home](https://github.com/pilu/fresh)
+[Project Home](https://github.com/air-verse/air)
