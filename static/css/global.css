@@ -19,7 +19,6 @@ div.content a, .citation {
     background-color: var(--pale-lime);
     color: var(--dark-lime);
     transition: color 0.15s;
-    text-decoration: none;
 }
 div.content a:hover, .citation {
     color: var(--dim-lime);
