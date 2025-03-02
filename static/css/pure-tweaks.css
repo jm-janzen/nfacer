@@ -63,3 +63,14 @@ div#menu div.pure-menu a.pure-menu-heading:hover {
     color: var(--bright-lime);
 }
 
+/* Defaults to 50, which is a little too roomy imho*/
+.content-subhead {
+    margin-top: 20px;
+    color: var(--dim-lime);
+}
+h2.content-subhead {
+    border-width: 0 0 3px;
+    border-style: solid;
+    border-image: linear-gradient(to right, var(--dim-lime) 10%, var(--pale-lime) 30%, transparent 60%);
+    border-image-slice: 1;
+}

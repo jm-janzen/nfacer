@@ -32,3 +32,15 @@ img.jm-profile-pic {
     border: 2px solid #191818;
 }
 
+
+hr {
+    color: var(--bright-lime);
+}
+
+strong {
+    color: var(--dark-lime);
+}
+
+blockquote {
+    color: grey;
+}
