@@ -6,23 +6,7 @@ body
       // Hamburger icon
       span
 
-    div#menu
-      div.pure-menu
-        a.pure-menu-heading href="#" JM Janzen
-          img.home-img src="/home.png"
-
-        ul.pure-menu-list
-          li.pure-menu-item
-            a.pure-menu-link href="/projects" projects
-          li.pure-menu-item
-            a.pure-menu-link href="/about" about
-          li.pure-menu-item
-            a.pure-menu-link href="/contact" contact
-          li.pure-menu-item.menu-item-divided.x-label
-            label external links
-          li.pure-menu-item.menu-item-divided
-            a.pure-menu-link.x-origin href="https://www.github.com/jm-janzen" github
-
+    = include templates/global/nav .
 
     div#main
       div.header
