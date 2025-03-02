@@ -18,12 +18,27 @@ body
       div.content
 
         h2.content-subhead internet foothold
-        p
-          |
-            Within these pages you can find information about me, my projects. For the
-            curious, see the 
-          a href="https://github.com/jm-janzen/nfacer" project&nbsp;source
-          |
-            for this website.
+        p. Within these pages you can find information about me, my projects. For the
+          curious, see the <a href="https://github.com/jm-janzen/nfacer">project&nbsp;source</a>
+          for this website.
+
+        p. Originally I started this website I guess on a whim. I wanted to play about with
+          <strong>go</strong> some more on my own, and a website rewrite seemed like
+          the perfect excuse to do that.
+
+        p. Other than that, I just love tinkering with new technologies, frameworks, etc.
+
+        h2.content-subhead okay but for real
+
+        p. I do have an actual personality beyond software development and being a diligent
+          worker, it's just that maybe a <s>glorified business card</s> personal "brand" (🤮️)
+          website might not be the best place for expressing that.
+
+        p. So just know that the content of this website is my attempt at squaring the conflict
+          described above, between the professional version of me and the more authentic, dynamic
+          representation of myself. So that's your disclaimer: like everyone, I'm more than either
+          of these personas.
+
+        p. OK, good talk. Enjoy the rest of the website!
 
 script src="/static/pure/js/ui.js" type="text/javascript"
