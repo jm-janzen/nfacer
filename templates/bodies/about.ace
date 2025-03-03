@@ -9,22 +9,22 @@ body
 
     = include templates/global/nav .
 
-    div id="main"
+    div.main
 
-      div class="header"
+      div.header
 
         h1 about
 
         img.jm-profile-pic src="/me.png" alt="Subject: JM Janzen, middle-aged bearded caucasian man smiling, colour portrait; Credit: Liz Cooper - Kingston Photographer"
 
-    div class="content"
+    div.content
 
-      h2 class="content-subhead" the basics
+      h2.content-subhead the basics
       p#content-about. I have been working professionally as a software developer
         for {milis}ms (or {years} years).
 
 
-      h2 class="content-subhead" the details
+      h2.content-subhead the details
 
       p. Early in my career, I caught the <i>startup bug</i>. So it's no coincidence that I've
         worked at several small to medium outfits. While I'm not against larger enterprises, I like
@@ -35,7 +35,7 @@ body
         making it less a matter of opinion, and more a set of best practices. (I'm all for
         creativity in personal projects but for work stuff I like boring and battle-tested.)
 
-      h2 class="content-subhead" the rest
+      h2.content-subhead the rest
 
       p. Other than working in my trade, I have interests in drawing, writing,
           playing with my 2 cats and 1 dog, and the unflinching adoration of my peers. ;p
