@@ -20,40 +20,27 @@ body
     div class="content"
 
       h2 class="content-subhead" the basics
-      p#content-about
-        |
-          I have been working professionally as a software developer for {milis}ms (or {years} years).
-      p
-        |
-          The first time I saw someone using a terminal on Linux, with amazing and
-          beautiful packages like <code>vim</code>, <code>git</code>, and <code>awk</code>,
-          I knew I wanted to spend my time working with this technology.
+      p#content-about. I have been working professionally as a software developer
+        for {milis}ms (or {years} years).
 
 
       h2 class="content-subhead" the details
-      p
-        |
-          Early in my career, I caught the
-        i startup bug.
-        |
-          So it's no coincidence that I've worked at several small to medium outfits. While I'm
-          not against larger enterprises, I like the dynamism and impact that is possible with
-          smaller, more nimble businesses.
-      p
-        |
-          I'm pretty comfortable along the entire stack (FE, BE, DevOps), especially now with
-          libraries like ReactJS and frameworks like NextJS, increasingly formalising FE work,
-          making it less a matter of opinion, and more a set of best practices. (I'm all for
-          creativity in personal projects but for work stuff I like boring and battle-tested.)
+
+      p. Early in my career, I caught the <i>startup bug</i>. So it's no coincidence that I've
+        worked at several small to medium outfits. While I'm not against larger enterprises, I like
+        the dynamism and impact that is possible with smaller, more nimble businesses.
+
+      p. I'm pretty comfortable along the entire stack (FE, BE, DevOps), especially now with
+        libraries like ReactJS and frameworks like NextJS, increasingly formalising FE work,
+        making it less a matter of opinion, and more a set of best practices. (I'm all for
+        creativity in personal projects but for work stuff I like boring and battle-tested.)
 
       h2 class="content-subhead" the rest
-      p
-        |
-          Other than working in my trade, I have interests in drawing, writing,
+
+      p. Other than working in my trade, I have interests in drawing, writing,
           playing with my 2 cats and 1 dog, and the unflinching adoration of my peers. ;p
-      p
-        |
-          Just kidding, I actually love constructive criticism.
+
+      p. Just kidding, I actually love constructive criticism.
 
       hr
 
