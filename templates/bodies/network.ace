@@ -1,0 +1,59 @@
+/ pass whatever data we got from Execution to this template
+= include templates/global/head .
+
+body
+  div#layout
+    a#menuLink.menu-link href="#menu"
+      // Hamburger icon
+      span
+
+    = include templates/global/nav .
+
+    div id="main"
+      div class="header"
+
+        h1 network
+
+        h2 other places
+
+    div class="content"
+
+      p.
+
+      table.pure-table
+        tbody
+          tr.inner-header
+            td colspan="2"
+              h2 class="content-subhead" get in touch
+          tr
+            td
+              label 📬️ Email
+            td
+              a href="mailto:hello@jmjanzen.com" hello@jmjanzen.com
+          tr
+            td
+              label 🕴️ LinkedIn
+            td
+              a href="https://www.linkedin.com/in/jm-janzen/" in/jm-janzen
+
+        tbody
+          tr.inner-header
+            td colspan="2"
+              h2 class="content-subhead" nerd hangs
+          tr
+            td
+              label 🦄️ GitHub
+            td
+              a href="https://github.com/jm-janzen" github.com/jm-janzen
+          tr
+            td
+              label 🍝️ Stack Overflow
+            td
+              a href="https://stackoverflow.com/users/4718693/j-m-janzen" /users/4718693/j-m-janzen
+          tr
+            td
+              label 🎓️ LeetCode
+            td
+              a href="https://leetcode.com/u/jm-janzen/" /u/jm-janzen/
+
+script src="/static/pure/js/ui.js" type="text/javascript"
