@@ -24,22 +24,26 @@ body
         for {milis}ms (or {years} years).
 
       p. I'm pretty comfortable along the entire contemporary stack, especially now with libraries
-        like ReactJS and frameworks like NextJS etc, increasingly formalising FE work, making it less a
-        matter of opinion, and more a set of best practices. (I'm all for creativity in personal
-        projects but for work stuff I prefer boring and battle-tested.)
+        like ReactJS and frameworks like NextJS etc, increasingly formalising
+        <abbr title="front-end">FE</abbr> work, making it less a matter of opinion, and more a set
+        of best practices. (I'm all for creativity in personal projects but for work stuff I prefer
+        boring and battle-tested.)
 
       p. I've never really specialised in one side or the other, but because I enjoy working in a
-        terminal so much, my skills has naturally veered toward the backend side of things. I just
-        think it's neat.
+        terminal so much, my skills have naturally inclined toward the backend side of things.
+        I just think it's neat.
 
       h2.content-subhead rip & tear & learn
 
-      p. Before I went to school for programming, I got my first taste of the awesome software
-        transforming power of code by modding <b>Doom</b>, and scripting functionality using
-        <a href="https://doomwiki.org/wiki/ACS">Action Code Script</a>, which has a syntax
-        like <b>C</b>, which made it a good gateway to accidentally learning about "real"
-        programming languages, and realising that actually programming and solving problems
-        on a computer was really rewarding, and it turns out that people pay for these skills!
+      p. Before I went to school for programming, I got my first taste of the awesome
+        software-transforming power of code by modding <b>Doom</b>. Especially when scripting
+        functionality using <a href="https://doomwiki.org/wiki/ACS">Action Code Script</a>,
+        which has a syntax like <b>C</b>. This in turn made it a good gateway to accidentally
+        learning about "real" programming languages, and realising that <i>hey actually</i>
+        programming and solving problems on a computer was really rewarding, and it turns out
+        that people pay for these skills!
+
+      h3.content-subhead JM meets his first linux grognard
 
       p. Near the end of graduating, I was lucky to get a student placement at a really cool
         linux shop, where I met my first mentor. He was an old school OpenBSD contributor who
@@ -49,7 +53,8 @@ body
         tools).
 
       p. As you may have gleaned, aesthetics played a big role in my inclination toward
-        becoming a software developer.
+        becoming a software developer. There's something about working in the terminal that looks
+        and feels <i>so cool</i> to me.
 
       h2.content-subhead like my fav text editor I'm modal lol
 
@@ -66,7 +71,7 @@ body
 
       hr
 
-      div.footer
+      footer
         small
           i Portrait image credit:  
           a.citation href="https://www.lizzography.com/" Liz Cooper Photography
