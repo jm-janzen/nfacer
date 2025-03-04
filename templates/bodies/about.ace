@@ -1,80 +1,72 @@
 / pass whatever data we got from Execution to this template
 = include templates/global/head .
 
-body
-  div#layout
-    a#menuLink.menu-link href="#menu"
-      // Hamburger icon
-      span
+div.main
 
-    = include templates/global/nav .
+  div.header
 
-    div.main
+    h1 about
 
-      div.header
+    img.jm-profile-pic src="/me.png" alt="Subject: JM Janzen, middle-aged bearded caucasian man smiling, colour portrait; Credit: Liz Cooper - Kingston Photographer"
 
-        h1 about
+div.content
 
-        img.jm-profile-pic src="/me.png" alt="Subject: JM Janzen, middle-aged bearded caucasian man smiling, colour portrait; Credit: Liz Cooper - Kingston Photographer"
+  h2.content-subhead the basics
+  p#content-about. I have been working professionally as a software developer
+    for {milis}ms (or {years} years).
 
-    div.content
+  p. I'm pretty comfortable along the entire contemporary stack, especially now with libraries
+    like ReactJS and frameworks like NextJS etc, increasingly formalising
+    <abbr title="front-end">FE</abbr> work, making it less a matter of opinion, and more a set
+    of best practices. (I'm all for creativity in personal projects but for work stuff I prefer
+    boring and battle-tested.)
 
-      h2.content-subhead the basics
-      p#content-about. I have been working professionally as a software developer
-        for {milis}ms (or {years} years).
+  p. I've never really specialised in one side or the other, but because I enjoy working in a
+    terminal so much, my skills have naturally inclined toward the backend side of things.
+    I just think it's neat.
 
-      p. I'm pretty comfortable along the entire contemporary stack, especially now with libraries
-        like ReactJS and frameworks like NextJS etc, increasingly formalising
-        <abbr title="front-end">FE</abbr> work, making it less a matter of opinion, and more a set
-        of best practices. (I'm all for creativity in personal projects but for work stuff I prefer
-        boring and battle-tested.)
+  h2.content-subhead rip & tear & learn
 
-      p. I've never really specialised in one side or the other, but because I enjoy working in a
-        terminal so much, my skills have naturally inclined toward the backend side of things.
-        I just think it's neat.
+  p. Before I went to school for programming, I got my first taste of the awesome
+    software-transforming power of code by modding <b>Doom</b>. Especially when scripting
+    functionality using <a href="https://doomwiki.org/wiki/ACS">Action Code Script</a>,
+    which has a syntax like <b>C</b>. This in turn made it a good gateway to accidentally
+    learning about "real" programming languages, and realising that <i>hey actually</i>
+    programming and solving problems on a computer was really rewarding, and it turns out
+    that people pay for these skills!
 
-      h2.content-subhead rip & tear & learn
+  h3.content-subhead JM meets his first linux grognard
 
-      p. Before I went to school for programming, I got my first taste of the awesome
-        software-transforming power of code by modding <b>Doom</b>. Especially when scripting
-        functionality using <a href="https://doomwiki.org/wiki/ACS">Action Code Script</a>,
-        which has a syntax like <b>C</b>. This in turn made it a good gateway to accidentally
-        learning about "real" programming languages, and realising that <i>hey actually</i>
-        programming and solving problems on a computer was really rewarding, and it turns out
-        that people pay for these skills!
+  p. Near the end of graduating, I was lucky to get a student placement at a really cool
+    linux shop, where I met my first mentor. He was an old school OpenBSD contributor who
+    had <em>the coolest</em> terminal workflow I had ever seen. He set me up with my first
+    <code>.vimrc</code> and showed me the ropes with various other packages that would
+    become my daily drivers in the years to come (<b>git</b> and other fundamental CLI
+    tools).
 
-      h3.content-subhead JM meets his first linux grognard
+  p. As you may have gleaned, aesthetics played a big role in my inclination toward
+    becoming a software developer. There's something about working in the terminal that looks
+    and feels <i>so cool</i> to me.
 
-      p. Near the end of graduating, I was lucky to get a student placement at a really cool
-        linux shop, where I met my first mentor. He was an old school OpenBSD contributor who
-        had <em>the coolest</em> terminal workflow I had ever seen. He set me up with my first
-        <code>.vimrc</code> and showed me the ropes with various other packages that would
-        become my daily drivers in the years to come (<b>git</b> and other fundamental CLI
-        tools).
+  h2.content-subhead like my fav text editor I'm modal lol
 
-      p. As you may have gleaned, aesthetics played a big role in my inclination toward
-        becoming a software developer. There's something about working in the terminal that looks
-        and feels <i>so cool</i> to me.
+  p. I don't put much stock in a unified online persona/brand/etc, so you won't find explicit
+    links to my other websites or socials here. When you find me on Bookwyrm, I'll be talking
+    to a different audience and with a different voice than when I'm on
+    <a href="https://midnight.pub/">Midnight Pub</a>, for instance. So personally, I don't
+    see a point in linking these personas besides vanity.
 
-      h2.content-subhead like my fav text editor I'm modal lol
+  p. Other than all that, I have interests in drawing, writing,
+      playing with my 2 cats and 1 dog, and the unflinching adoration of my peers. ;p
 
-      p. I don't put much stock in a unified online persona/brand/etc, so you won't find explicit
-        links to my other websites or socials here. When you find me on Bookwyrm, I'll be talking
-        to a different audience and with a different voice than when I'm on
-        <a href="https://midnight.pub/">Midnight Pub</a>, for instance. So personally, I don't
-        see a point in linking these personas besides vanity.
+  p. Just kidding, I actually love constructive criticism.
 
-      p. Other than all that, I have interests in drawing, writing,
-          playing with my 2 cats and 1 dog, and the unflinching adoration of my peers. ;p
+  hr
 
-      p. Just kidding, I actually love constructive criticism.
-
-      hr
-
-      footer
-        small
-          i Portrait image credit:  
-          a.citation href="https://www.lizzography.com/" Liz Cooper Photography
+  footer
+    small
+      i Portrait image credit:  
+      a.citation href="https://www.lizzography.com/" Liz Cooper Photography
 
 script src="/static/pure/js/ui.js" type="text/javascript"
 
