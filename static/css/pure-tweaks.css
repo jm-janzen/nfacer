@@ -74,3 +74,11 @@ h2.content-subhead {
     border-image: linear-gradient(to right, var(--dim-lime) 10%, var(--pale-lime) 30%, transparent 60%);
     border-image-slice: 1;
 }
+
+.pure-table,
+.pure-table td {
+    border: none;
+}
+.pure-table tr.inner-header td {
+    padding-left: 0;
+}
