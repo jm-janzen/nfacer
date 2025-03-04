@@ -1,68 +1,60 @@
 = include templates/global/head .
 
-body
-  div#layout
-    a#menuLink.menu-link href="#menu"
-      // Hamburger icon
-      span
+div id="main"
+  div class="header"
 
-    = include templates/global/nav .
+    h1 links
 
-    div id="main"
-      div class="header"
+    h2 some of my favourite things
 
-        h1 links
+div class="content"
 
-        h2 some of my favourite things
+  h2 class="content-subhead" fediverse
+  h3 class="content-subhead" imagine social media; now imagine it's good. That's fedi.
 
-    div class="content"
+  blockquote. The <a href="https://en.wikipedia.org/wiki/Fediverse">fediverse</a> is
+    a collection of social networking services that can communicate with each
+    other using a common protocol. Users of different websites can send and
+    receive status updates, multimedia files and other data across the
+    network. The term fediverse is a portmanteau of
+    <strong>fed</strong>eration and un<strong>iverse</strong>.
 
-      h2 class="content-subhead" fediverse
-      h3 class="content-subhead" imagine social media; now imagine it's good. That's fedi.
+  p. My absolute favourite is <a href="https://books.theunseen.city/about">Bookwyrm</a>,
+    especially my home instance there. I like Bookwyrm because it has this super chill
+    cadence, so you don't feel the need to check multiple times a day. Exactly the right
+    cadence for checking in whenever you finish a book, or are looking for a new one.
 
-      blockquote. The <a href="https://en.wikipedia.org/wiki/Fediverse">fediverse</a> is
-        a collection of social networking services that can communicate with each
-        other using a common protocol. Users of different websites can send and
-        receive status updates, multimedia files and other data across the
-        network. The term fediverse is a portmanteau of
-        <strong>fed</strong>eration and un<strong>iverse</strong>.
+  p. I'm also <s>addicted</s> fond of getting a good scroll on in
+    <a href="https://slrpnk.net/">Lemmy</a>, which is basically a drop-in replacement for
+    reddit. Except unlike reddit, it's much less prone to
+    <a href="https://en.wikipedia.org/wiki/Enshittification">enshittification</a>, because
+    of its decentralised structure. The core dev team and server admins pay for it through
+    donations and not being stupid.
 
-      p. My absolute favourite is <a href="https://books.theunseen.city/about">Bookwyrm</a>,
-        especially my home instance there. I like Bookwyrm because it has this super chill
-        cadence, so you don't feel the need to check multiple times a day. Exactly the right
-        cadence for checking in whenever you finish a book, or are looking for a new one.
+  p. And then of course there's <a href="https://mstdn.ca/about">Mastodon</a>. I was never
+    really into microblogging even before the dominant platform was overrun by fascists, but
+    this one (I'm on a Canadian instance) is pretty cool. I've had some good little exchanges
+    on here, but they still feel more transactional than I'd like. Something about the larger,
+    more public, audience maybe.
 
-      p. I'm also <s>addicted</s> fond of getting a good scroll on in
-        <a href="https://slrpnk.net/">Lemmy</a>, which is basically a drop-in replacement for
-        reddit. Except unlike reddit, it's much less prone to
-        <a href="https://en.wikipedia.org/wiki/Enshittification">enshittification</a>, because
-        of its decentralised structure. The core dev team and server admins pay for it through
-        donations and not being stupid.
+  p. Also honourable mention here for <strong>email</strong>! While not officially part of
+    the fediverse, it does also benefit from a common set of
+    <a href="https://en.wikipedia.org/wiki/Internet_Message_Access_Protocol">protocols</a>,
+    and so is a perennial fav for quality correspondence, especially long, asynchronous, one
+    on one conversations - pen-pal style. Some of my best, deepest conversations have been over
+    email.
 
-      p. And then of course there's <a href="https://mstdn.ca/about">Mastodon</a>. I was never
-        really into microblogging even before the dominant platform was overrun by fascists, but
-        this one (I'm on a Canadian instance) is pretty cool. I've had some good little exchanges
-        on here, but they still feel more transactional than I'd like. Something about the larger,
-        more public, audience maybe.
+  p. There's something special about getting an email from an actual person, addressed
+    specifically to you and no one else...
+    <a
+      style="text-decoration:none;background-color:transparent"
+      href="mailto:hello@jmjanzen.com"
+    >
+      ✉️
+    </a>
 
-      p. Also honourable mention here for <strong>email</strong>! While not officially part of
-        the fediverse, it does also benefit from a common set of
-        <a href="https://en.wikipedia.org/wiki/Internet_Message_Access_Protocol">protocols</a>,
-        and so is a perennial fav for quality correspondence, especially long, asynchronous, one
-        on one conversations - pen-pal style. Some of my best, deepest conversations have been over
-        email.
+  h2 class="content-subhead" software
+  h3 class="content-subhead" things that make the lights on the rectangle change <i>good</i>.
 
-      p. There's something special about getting an email from an actual person, addressed
-        specifically to you and no one else...
-        <a
-          style="text-decoration:none;background-color:transparent"
-          href="mailto:hello@jmjanzen.com"
-        >
-          ✉️
-        </a>
-
-      h2 class="content-subhead" software
-      h3 class="content-subhead" things that make the lights on the rectangle change <i>good</i>.
-
-      p. 🚧️ Under Construction 🚧️
+  p. 🚧️ Under Construction 🚧️
 

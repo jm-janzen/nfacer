@@ -1,6 +1,5 @@
 / pass whatever data we got from Execution to this template
 = include templates/global/head .
-= include templates/global/nav
 
 div#main
   div.header

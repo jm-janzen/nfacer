@@ -1,7 +1,7 @@
 = doctype html
 html lang=en
   head
-    meta charset=utf-8
+    meta charset="utf-8"
     base href="/"
     meta name="viewport" content="width=device-width, initial-scale=1"
     meta name="description" content="JM Janzen's personal homepage, portal to other works"
@@ -11,3 +11,23 @@ html lang=en
     link rel="stylesheet" href="/static/css/global.css"
     script src="static/js/global.js"
     title {{.Title}}
+
+body
+  div#layout
+    a#menuLink.menu-link href="#menu"
+      // Hamburger icon
+      span
+
+    div#menu
+      div.pure-menu
+        a.pure-menu-heading href="#" JM Janzen
+          img.home-img src="/home.png"
+
+        ul.pure-menu-list
+          li.pure-menu-item
+            a.pure-menu-link href="/about" about
+          li.pure-menu-item
+            a.pure-menu-link href="/network" network
+          li.pure-menu-item
+            a.pure-menu-link href="/links" links
+
