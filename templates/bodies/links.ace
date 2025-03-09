@@ -31,7 +31,14 @@ div class="content"
     of its decentralised structure. The core dev team and server admins pay for it through
     donations and not being stupid.
 
-  p. And then of course there's <a href="https://mstdn.ca/about">Mastodon</a>. I was never
+  h3.content-subhead Yeah we get hyperlocal
+
+  p. I'm currently experimenting with my own hyperlocal social media instance (also Lemmy),
+    for my city, at <a href="https://lemmy.kgon.ca/">lemmy.kgon.ca</a> (there's nothing going
+    on there as writing this). Might add more local social medias, I don't know;
+    but I really like the idea.
+
+  p. Finally, there's <a href="https://mstdn.ca/about">Mastodon</a>. I was never
     really into microblogging even before the dominant platform was overrun by fascists, but
     this one (I'm on a Canadian instance) is pretty cool. I've had some good little exchanges
     on here, but they still feel more transactional than I'd like. Something about the larger,

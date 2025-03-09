@@ -8,6 +8,7 @@ div.main
     h1 about
 
     img.jm-profile-pic src="/me.png" alt="Subject: JM Janzen, middle-aged bearded caucasian man smiling, colour portrait; Credit: Liz Cooper - Kingston Photographer"
+    span.caption. nerrrrrrrrrrrrrrrrrrrd
 
 div.content
 
