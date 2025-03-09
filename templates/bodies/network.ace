@@ -19,12 +19,12 @@ div class="content"
           h2 class="content-subhead" get in touch
       tr
         td
-          label 📬️ Email
+          label 📬️&nbsp;Email
         td
           a href="mailto:hello@jmjanzen.com" hello@jmjanzen.com
       tr
         td
-          label 🕴️ LinkedIn
+          label 🕴️&nbsp;LinkedIn
         td
           a href="https://www.linkedin.com/in/jm-janzen/" in/jm-janzen
 
@@ -34,17 +34,17 @@ div class="content"
           h2 class="content-subhead" nerd hangs
       tr
         td
-          label 🦄️ GitHub
+          label 🦄️&nbsp;GitHub
         td
           a href="https://github.com/jm-janzen" github.com/jm-janzen
       tr
         td
-          label 🍝️ Stack Overflow
+          label 🍝️&nbsp;Stack&nbsp;Overflow
         td
           a href="https://stackoverflow.com/users/4718693/j-m-janzen" /users/4718693/j-m-janzen
       tr
         td
-          label 🎓️ LeetCode
+          label 🎓️&nbsp;LeetCode
         td
           a href="https://leetcode.com/u/jm-janzen/" /u/jm-janzen/
 

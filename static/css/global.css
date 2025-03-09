@@ -28,7 +28,8 @@ div.content a:hover, .citation {
 /* My profile pic (on About page) */
 img.jm-profile-pic {
     display: block;
-    margin: 2% auto;
+    margin: auto;
+    margin-top: 1%;
     border: 2px solid #191818;
 }
 
@@ -49,4 +50,8 @@ label {
     margin-right: 0.5em;
     font-size: 1.2em;
     color: var(--dark-lime);
+}
+
+span.caption {
+    color: #999999;
 }
