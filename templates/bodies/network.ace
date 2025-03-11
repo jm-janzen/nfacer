@@ -21,12 +21,12 @@ div class="content"
         td
           label 📬️&nbsp;Email
         td
-          a href="mailto:hello@jmjanzen.com" hello@jmjanzen.com
+          a href="mailto:hello@jmjanzen.com" hello
       tr
         td
           label 🕴️&nbsp;LinkedIn
         td
-          a href="https://www.linkedin.com/in/jm-janzen/" in/jm-janzen
+          a href="https://www.linkedin.com/in/jm-janzen/" jm-janzen
 
     tbody
       tr.inner-header
@@ -36,16 +36,16 @@ div class="content"
         td
           label 🦄️&nbsp;GitHub
         td
-          a href="https://github.com/jm-janzen" github.com/jm-janzen
+          a href="https://github.com/jm-janzen" jm-janzen
       tr
         td
           label 🍝️&nbsp;Stack&nbsp;Overflow
         td
-          a href="https://stackoverflow.com/users/4718693/j-m-janzen" /users/4718693/j-m-janzen
+          a href="https://stackoverflow.com/users/4718693/j-m-janzen" j-m-janzen
       tr
         td
           label 🎓️&nbsp;LeetCode
         td
-          a href="https://leetcode.com/u/jm-janzen/" /u/jm-janzen/
+          a href="https://leetcode.com/u/jm-janzen/" jm-janzen
 
 script src="/static/pure/js/ui.js" type="text/javascript"
