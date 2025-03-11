@@ -78,6 +78,7 @@ h2.content-subhead {
 .pure-table,
 .pure-table td {
     border: none;
+    padding: 8px 0;
 }
 .pure-table tr.inner-header td {
     padding-left: 0;
