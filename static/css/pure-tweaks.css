@@ -9,14 +9,14 @@ div#menu div.pure-menu a.pure-menu-heading {
 }
 
 code {
-  color: var(--dim-lime);
+    color: var(--dim-lime);
 }
 
 /* "home" image next to Menu Header */
 img.home-img {
-	padding-left: 5%;
-	width: 15%;
-	height: auto;
+    padding-left: 5%;
+    width: 15%;
+    height: auto;
 }
 
 div#menu {
@@ -46,8 +46,8 @@ div#menu div.pure-menu a.x-origin {
 div#menu div.pure-menu li.x-label {
     background-color: #101010;
     color: #505050;
-	text-align: center;
-	font-size: 0.7em;
+    text-align: center;
+    font-size: 0.7em;
 }
 
 /* Internal links */
