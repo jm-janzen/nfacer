@@ -65,3 +65,4 @@ div class="content"
 
   p. 🚧️ Under Construction 🚧️
 
+script src="/static/pure/js/ui.js" type="text/javascript"
