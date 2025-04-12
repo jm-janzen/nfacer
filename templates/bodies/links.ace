@@ -1,16 +1,16 @@
 = include templates/global/head .
 
-div id="main"
-  div class="header"
+div#main
+  div.header
 
     h1 links
 
     h2 some of my favourite things
 
-div class="content"
+div.content
 
-  h2 class="content-subhead" fediverse
-  h3 class="content-subhead" imagine social media; now imagine it's good. That's fedi.
+  h2.content-subhead fediverse
+  h3.content-subhead imagine social media; now imagine it's good. That's fedi.
 
   blockquote. The <a href="https://en.wikipedia.org/wiki/Fediverse">fediverse</a> is
     a collection of social networking services that can communicate with each
@@ -60,8 +60,8 @@ div class="content"
       ✉️
     </a>
 
-  h2 class="content-subhead" software
-  h3 class="content-subhead" things that make the lights on the rectangle change <i>good</i>.
+  h2.content-subhead software
+  h3.content-subhead things that make the lights on the rectangle change <i>good</i>.
 
   p. 🚧️ Under Construction 🚧️
 
