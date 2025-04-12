@@ -55,3 +55,11 @@ label {
 span.caption {
     color: #999999;
 }
+
+/* Footnotes light, except dagger marks which are default #777 */
+p.footnote {
+    color: #AFAFAF;
+}
+p.footnote sup {
+    color: #666;
+}

@@ -4,34 +4,34 @@
 div#main
   div.header
 
-    h1 hello
+    h1 JM's place
 
-    h2 and welcome
+    h2 super cool professional and eclectic homepage
 
   div.content
 
     h2.content-subhead internet foothold
-    p. Within these pages you can find information about me, my projects. For the
-      curious, see the <a href="https://github.com/jm-janzen/nfacer">project&nbsp;source</a>
-      for this website.
+    p Welcome to the personal homepage of <abbr title='Pronounced "J.M."'>JM</abbr> Janzen - that's me; I'm JM, and I'm the webmaster around these here parts. Got a problem with it? That's cool. I don't have a problem with you, so enjoy your stay.
 
-    p. Originally I started this website I guess on a whim. I wanted to play about with
-      <strong>go</strong> some more on my own, and a website rewrite seemed like
-      the perfect excuse to do that.
+    p For the curious, see the <a href="https://github.com/jm-janzen/nfacer">project&nbsp;source</a> for this website (basically just a router with some Ace template interpreting). Some version of this website has been going since 2016, and it wasn't much more interesting back then either. You can find the previous version running at <a href="https://old.jmjanzen.com/">old.jmjanzen.com</a>. This version actually feels little too clean currently, and I'd love to get back to some of that messy experimentation that I used to enjoy.
 
-    p. Other than that, I just love tinkering with new technologies, frameworks, etc.
+    p So yeah, like every personal homepage this one is under construction. (Please try not to trip over any 🚧️ signs you might find.)
 
-    h2.content-subhead okay but for real
+    h2.content-subhead but for real i hate this website
 
-    p. I do have an actual personality beyond software development and being a diligent
-      worker, it's just that maybe a <s>glorified business card</s> personal "brand" (🤮️)
-      website might not be the best place for expressing that.
+    p Like what do I even do with it? It's too personal to get really creative, but if it stays this bland it's not really worth the bandwidth or disk space it's taking up.
 
-    p. So just know that the content of this website is my attempt at squaring the conflict
-      described above, between the professional version of me and the more authentic, dynamic
-      representation of myself. So that's your disclaimer: like everyone, I'm more than either
-      of these personas.
+    p Having a website tied to your IRL name is a bit of a drag for an overthinker like me. I can't help but wonder about the various audiences that might visit: Family and friends, internet randos<sup>&dagger;</sup>, co-workers, prospective employers??
+
+    p So just <abbr title="For Your Information">FYI</abbr> that I do have an actual personality beyond software development and being a diligent worker<sup>&Dagger;</sup>, it's just that maybe a <s>glorified business card</s> personal "brand" (🤮️) website might not be the best place for expressing that.
 
     p. OK, good talk. Enjoy the rest of the website!
+
+    hr
+
+    p.footnote
+      ||
+        <sup>&dagger;</sup> Double welcome to you! My favourite guests.
+        <sup>&Dagger;</sup> Note to prospective employers that I am indeed a brilliant and diligent worker. In fact the <em>most</em> diligent of all workers! Please ignore the lies of the others.
 
 script src="/static/pure/js/ui.js" type="text/javascript"
