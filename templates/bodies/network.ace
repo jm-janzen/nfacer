@@ -15,12 +15,12 @@ div.content
       tr.inner-header
         td colspan="2"
           h2.content-subhead get in touch
-      tr
+      tr title="ol' fashioned in'ernet E-mail"
         td
           label 📬️&nbsp;Email
         td
           a href="mailto:hello@jmjanzen.com" hello
-      tr
+      tr title="My professional worksona wow so fun"
         td
           label 🕴️&nbsp;LinkedIn
         td
@@ -30,17 +30,17 @@ div.content
       tr.inner-header
         td colspan="2"
           h2.content-subhead nerd hangs
-      tr
+      tr title="Upload most of my code here"
         td
           label 🦄️&nbsp;GitHub
         td
           a href="https://github.com/jm-janzen" jm-janzen
-      tr
+      tr title="Where the spaghet comes from"
         td
           label 🍝️&nbsp;Stack&nbsp;Overflow
         td
           a href="https://stackoverflow.com/users/4718693/j-m-janzen" j-m-janzen
-      tr
+      tr title="Slowly learning proper DSA"
         td
           label 🎓️&nbsp;LeetCode
         td
