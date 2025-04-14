@@ -63,3 +63,9 @@ p.footnote {
 p.footnote sup {
     color: #666;
 }
+
+.center {
+    text-align: center;
+    display: block;
+    margin: auto;
+}

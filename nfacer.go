@@ -94,6 +94,9 @@ func main() {
 	mux.HandleFunc("/me.png", func(w http.ResponseWriter, r *http.Request) {
 		http.ServeFile(w, r, "static/img/me.png")
 	})
+	mux.HandleFunc("/pinky-demon.gif", func(w http.ResponseWriter, r *http.Request) {
+		http.ServeFile(w, r, "static/img/pinky-demon.gif")
+	})
 
 	// If any issue starting, log err, and exit(1)
 	listenPort := ":6060"

@@ -22,11 +22,14 @@ div.content
     of best practices. (I'm all for creativity in personal projects but for work stuff I prefer
     boring and battle-tested.)
 
-  p. I've never really specialised in one side or the other, but because I enjoy working in a
+  p. I've never really specialised in one side or the other, but because I enjoy working in the
     terminal so much, my skills have naturally inclined toward the backend side of things.
     I just think it's neat.
 
   h2.content-subhead rip & tear & learn
+
+  img.center src="/pinky-demon.gif" alt="Pinky demon from Doom (1993) walking and biting animation"
+  span.caption.center pinky
 
   p. Before I went to school for programming, I got my first taste of the awesome
     software-transforming power of code by modding <b>Doom</b>. Especially when scripting

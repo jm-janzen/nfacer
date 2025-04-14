@@ -52,13 +52,18 @@ div.content
     email.
 
   p. There's something special about getting an email from an actual person, addressed
-    specifically to you and no one else...
+    specifically to you...
     <a
       style="text-decoration:none;background-color:transparent"
       href="mailto:hello@jmjanzen.com"
     >
       ✉️
     </a>
+
+  h2.content-subhead Smol web
+  h3.content-subhead Web 1.0 - the web when it was for people
+
+  p. 🚧️ Under Construction 🚧️
 
   h2.content-subhead software
   h3.content-subhead things that make the lights on the rectangle change <i>good</i>.
