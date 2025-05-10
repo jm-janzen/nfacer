@@ -33,10 +33,10 @@ div.content
 
   h3.content-subhead Yeah we get hyperlocal
 
-  p. I'm currently experimenting with my own hyperlocal social media instance (also Lemmy),
-    for my city, at <a href="https://lemmy.kgon.ca/">lemmy.kgon.ca</a> (there's nothing going
-    on there as writing this). Might add more local social medias, I don't know;
-    but I really like the idea.
+  p. I'm currently experimenting with my own social media instance (also
+    Lemmy), for my city, at <a href="https://lemmy.kgon.ca/">lemmy.kgon.ca</a>
+    (not promoting this, and no guarantee of stability at the moment). Might add
+    more local social medias, I don't know; but I really like the idea.
 
   p. Finally, there's <a href="https://mstdn.ca/about">Mastodon</a>. I was never
     really into microblogging even before the dominant platform was overrun by fascists, but
