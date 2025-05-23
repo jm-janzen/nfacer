@@ -1,9 +1,6 @@
 /*
  *	Tweaks to pure-css rules
  */
-body {
-    color: #777;
-}
 
 /* Menu header (ie: "JM Janzen") */
 div#menu div.pure-menu a.pure-menu-heading {
