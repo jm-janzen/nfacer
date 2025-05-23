@@ -28,8 +28,15 @@ div.content
 
   h2.content-subhead rip & tear & learn
 
-  img.center src="/static/img/pinky-demon.gif" alt="Pinky demon from Doom (1993) walking and biting animation"
-  span.caption.center pinky
+  = javascript
+    function boom() {
+      document.getElementById('pinky').setAttribute('src', '/static/img/pinky-demon-boom.gif')
+      setTimeout(() => {
+        document.getElementById('pinky-caption').innerHTML = 'dead pinky'
+      }, 1500)
+    }
+  img.center#pinky src="/static/img/pinky-demon.gif" alt="Pinky demon from Doom (1993) walking and biting animation" onClick="boom()"
+  span.caption.center#pinky-caption pinky
 
   p. Before I went to school for programming, I got my first taste of the awesome
     software-transforming power of code by modding <b>Doom</b>. Especially when scripting
