@@ -21,7 +21,7 @@ body
     div#menu
       div.pure-menu
         a.pure-menu-heading href="#" JM Janzen
-          img.home-img src="/home.png"
+          img.home-img src="static/img/home.png"
 
         ul.pure-menu-list
           li.pure-menu-item

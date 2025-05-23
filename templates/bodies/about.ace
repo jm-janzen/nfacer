@@ -7,7 +7,7 @@ div.main
 
     h1 about
 
-    img.jm-profile-pic src="/me.png" alt="Subject: JM Janzen, middle-aged bearded caucasian man smiling, colour portrait; Credit: Liz Cooper - Kingston Photographer"
+    img.jm-profile-pic src="/static/img/me.png" alt="Subject: JM Janzen, middle-aged bearded caucasian man smiling, colour portrait; Credit: Liz Cooper - Kingston Photographer"
     span.caption. nerrrrrrrrrrrrrrrrrrrd
 
 div.content
@@ -28,7 +28,7 @@ div.content
 
   h2.content-subhead rip & tear & learn
 
-  img.center src="/pinky-demon.gif" alt="Pinky demon from Doom (1993) walking and biting animation"
+  img.center src="/static/img/pinky-demon.gif" alt="Pinky demon from Doom (1993) walking and biting animation"
   span.caption.center pinky
 
   p. Before I went to school for programming, I got my first taste of the awesome
