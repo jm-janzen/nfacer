@@ -7,13 +7,12 @@ tmp_dir = "tmp"
   bin = "./tmp/main"
   cmd = "go build -o ./tmp/main ."
   delay = 1000
-  exclude_dir = ["assets", "tmp", "vendor", "testdata"]
+  exclude_dir = ["assets", "tmp", "vendor", "testdata", "utils"]
   exclude_file = []
   exclude_regex = ["_test.go"]
   exclude_unchanged = false
   follow_symlink = false
   full_bin = ""
-  include_dir = ["templates", "static"]
   include_ext = ["go", "tpl", "tmpl", "html", "css", "ace"]
   include_file = []
   kill_delay = "0s"
@@ -45,7 +44,7 @@ tmp_dir = "tmp"
 [proxy]
   app_port = 6060
   enabled = true
-  proxy_port = 8080
+  proxy_port = 9090
 
 [screen]
   clear_on_rebuild = false
