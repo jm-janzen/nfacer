@@ -13,7 +13,7 @@ div#main
     h2.content-subhead internet foothold
     p Welcome to the personal homepage of <abbr title='Pronounced "J.M."'>JM</abbr> Janzen - that's me; I'm JM, and I'm the webmaster around these here parts. Got a problem with it? That's cool. I don't have a problem with you, so enjoy your stay.
 
-    p For the curious, see the <a href="https://github.com/jm-janzen/nfacer">project&nbsp;source</a> for this website (basically just a router with some Ace template interpreting). Some version of this website has been going since 2016, and it wasn't much more interesting back then either. You can find the previous version running at <a href="https://old.jmjanzen.com/">old.jmjanzen.com</a>. This version actually feels little too clean currently, and I'd love to get back to some of that messy experimentation that I used to enjoy.
+    p For the curious, see the <a href="https://github.com/jm-janzen/nfacer">project&nbsp;source</a> for this website (basically just a Go router with some Ace template interpreting). Some version of this website has been going since 2016, and it wasn't much more interesting back then either. You can find the previous version running at <a href="https://old.jmjanzen.com/">old.jmjanzen.com</a>. This here version actually feels little too clean currently, and I'd love to get back to some of that messy experimentation that I used to enjoy.
 
     p So yeah, like every personal homepage this one is under construction. (Please try not to trip over any 🚧️ signs you might find.)
 
