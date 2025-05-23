@@ -30,7 +30,8 @@ div.content
 
   = javascript
     function boom() {
-      document.getElementById('pinky').setAttribute('src', '/static/img/pinky-demon-boom.gif')
+      const path =  `/static/img/pinky-demon-boom.gif#${Math.random()}`
+      document.getElementById('pinky').setAttribute('src', path)
       setTimeout(() => {
         document.getElementById('pinky-caption').innerHTML = 'dead pinky'
       }, 1500)
